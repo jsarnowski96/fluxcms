@@ -1,15 +1,45 @@
+<nav class="d-flex justify-content-end navbar navbar-dark bg-dark text-light">
+  <div class="btn-group dropleft">
+    <button type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropleft
+    </button>
+    <div class="dropdown-menu">
+      <span class="dropdown-item-text">Dropdown item text</span>
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</nav>
 <div class="wrapper">
   <!-- Sidebar -->
   <nav id="sidebar">
     <div class="sidebar-header">
-      <h3>Flux Cms</h3>
-      <h4>Dashboard</h4>
+      <h3 class="text-center">Flux Cms</h3>
+      <h4 class="text-center">Dashboard</h4>
     </div>
 
     <ul class="list-unstyled components">
-      <li class="active">
-        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-        <ul class="collapse list-unstyled" id="homeSubmenu">
+      <li class="nav-item active" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" [routerLink]="['/']">Main page</a>
+      </li>
+      <li>
+        <a href="#entrySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Entries</a>
+        <ul class="collapse list-unstyled" id="entrySubmenu">
+          <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+            <a href="#">Page 1</a>
+          </li>
+          <li>
+            <a href="#">Page 2</a>
+          </li>
+          <li>
+            <a href="#">Page 3</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+        <ul class="collapse list-unstyled" id="pageSubmenu">
           <li>
             <a href="#">Home 1</a>
           </li>
@@ -22,19 +52,30 @@
         </ul>
       </li>
       <li>
-        <a href="#">About</a>
+        <a href="#commentSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Comments</a>
+        <ul class="collapse list-unstyled" id="commentSubmenu">
+          <li>
+            <a href="#">Home 1</a>
+          </li>
+          <li>
+            <a href="#">Home 2</a>
+          </li>
+          <li>
+            <a href="#">Home 3</a>
+          </li>
+        </ul>
       </li>
       <li>
-        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-        <ul class="collapse list-unstyled" id="pageSubmenu">
+        <a href="#settingSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Settings</a>
+        <ul class="collapse list-unstyled" id="settingSubmenu">
           <li>
-            <a href="#">Page 1</a>
+            <a href="#">Home 1</a>
           </li>
           <li>
-            <a href="#">Page 2</a>
+            <a href="#">Home 2</a>
           </li>
           <li>
-            <a href="#">Page 3</a>
+            <a href="#">Home 3</a>
           </li>
         </ul>
       </li>
@@ -45,50 +86,6 @@
         <a href="#">Contact</a>
       </li>
     </ul>
+    <!-- Footer -->
   </nav>
 </div>
-
-<!--<header>
-  <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
-  >
-    <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">FluxCms</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target=".navbar-collapse"
-        aria-label="Toggle navigation"
-        [attr.aria-expanded]="isExpanded"
-        (click)="toggle()"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
-        [ngClass]="{ show: isExpanded }"
-      >
-        <ul class="navbar-nav flex-grow">
-          <li
-            class="nav-item"
-            [routerLinkActive]="['link-active']"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/counter']"
-              >Counter</a
-            >
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
-              >Fetch data</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>-->
