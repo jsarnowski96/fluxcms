@@ -1,5 +1,8 @@
 <body>
-  <app-nav-menu></app-nav-menu>
+  <div *ngIf="!isHome;else loadNav"></div>
+  <ng-template #loadNav>
+    <app-nav-menu></app-nav-menu>
+  </ng-template>
   <div class="container">
     <router-outlet></router-outlet>
   </div>

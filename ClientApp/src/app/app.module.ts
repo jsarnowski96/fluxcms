@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { MonitorComponent } from './monitor/monitor.component';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ChartsModule } from 'ng2-charts';
     HomeComponent,
     FetchDataComponent,
     MonitorComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,7 +31,8 @@ import { ChartsModule } from 'ng2-charts';
       { path: '', component: HomeComponent, pathMatch: 'full' },
         { path: 'fetch-data', component: FetchDataComponent },
         { path: 'monitor', component: MonitorComponent },
-        { path: 'login', component: LoginComponent }
+        { path: 'login', component: LoginComponent },
+        { path: 'dashboard', component: DashboardComponent }
     ])
   ],
   providers: [],

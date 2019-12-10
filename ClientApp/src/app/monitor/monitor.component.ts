@@ -13,6 +13,8 @@ import * as pluginDataLabels from 'chartjs-plugin-datalabels';
 export class MonitorComponent implements OnInit {
 /** monitor ctor */
     // CPU usage chart
+    isHome: boolean = false
+
     public cpuUsageOptions: ChartOptions = {
         responsive: true,
         legend: {
