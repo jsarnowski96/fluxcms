@@ -8,6 +8,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { MonitorComponent } from './monitor/monitor.component';
+import { LoginComponent } from './login/login.component';
 import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ChartsModule } from 'ng2-charts';
     NavMenuComponent,
     HomeComponent,
     FetchDataComponent,
-    MonitorComponent
+    MonitorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -26,7 +28,8 @@ import { ChartsModule } from 'ng2-charts';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
         { path: 'fetch-data', component: FetchDataComponent },
-        { path: 'monitor', component: MonitorComponent }
+        { path: 'monitor', component: MonitorComponent },
+        { path: 'login', component: LoginComponent }
     ])
   ],
   providers: [],
