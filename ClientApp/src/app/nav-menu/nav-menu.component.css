@@ -103,6 +103,16 @@ ul ul a {
   background: #463f3e /*#6d7fcc*/;
 }
 
+ul ul ul a {
+  font-size: 0.75em !important;
+  padding-left: 50px !important;
+  background: #5f5959;
+}
+
+ul ul ul li:first-child {
+  border-bottom: 1px solid black;
+}
+
 .wrapper {
   display: flex;
   width: 100%;
