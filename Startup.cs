@@ -1,3 +1,5 @@
+using FluxCms.Model;
+using FluxCms.Services;
 using FluxCms.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -23,12 +25,17 @@ namespace FluxCms
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<FluxCmsContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.AddTransient<IRegistrationService,RegistrationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
