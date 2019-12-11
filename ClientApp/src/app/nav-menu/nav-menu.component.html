@@ -27,13 +27,16 @@
         <a href="#entrySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Entries</a>
         <ul class="collapse list-unstyled" id="entrySubmenu">
           <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
-            <a href="#">Page 1</a>
+            <a href="#">All entries</a>
           </li>
           <li>
-            <a href="#">Page 2</a>
+            <a href="#">Add new entry</a>
           </li>
           <li>
-            <a href="#">Page 3</a>
+            <a href="#">Categories</a>
+          </li>
+          <li>
+            <a href="#">Tags</a>
           </li>
         </ul>
       </li>
@@ -41,41 +44,32 @@
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
         <ul class="collapse list-unstyled" id="pageSubmenu">
           <li>
-            <a href="#">Home 1</a>
+            <a href="#">All pages</a>
           </li>
           <li>
-            <a href="#">Home 2</a>
-          </li>
-          <li>
-            <a href="#">Home 3</a>
+            <a href="#">Add new page</a>
           </li>
         </ul>
       </li>
       <li>
-        <a href="#commentSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Comments</a>
-        <ul class="collapse list-unstyled" id="commentSubmenu">
-          <li>
-            <a href="#">Home 1</a>
-          </li>
-          <li>
-            <a href="#">Home 2</a>
-          </li>
-          <li>
-            <a href="#">Home 3</a>
-          </li>
-        </ul>
+        <a href="#commentsLink">Comments</a>
       </li>
       <li>
         <a href="#settingSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Settings</a>
         <ul class="collapse list-unstyled" id="settingSubmenu">
           <li>
-            <a href="#">Home 1</a>
+            <a href="#usersSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Users</a>
+            <ul class="collapse list-unstyled" id="usersSubmenu">
+              <li><a href="#">All users</a></li>
+              <li><a href="#">Add new user</a></li>
+            </ul>
           </li>
           <li>
-            <a href="#">Home 2</a>
-          </li>
-          <li>
-            <a href="#">Home 3</a>
+            <a href="#rolesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Roles</a>
+            <ul class="collapse list-unstyled" id="rolesSubmenu">
+              <li><a href="#">All roles</a></li>
+              <li><a href="#">Add new role</a></li>
+            </ul>
           </li>
         </ul>
       </li>

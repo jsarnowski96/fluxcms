@@ -17,21 +17,23 @@
   <!-- jQuery Custom Scroller CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/conic-gradient.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
   <script>
-  $(document).ready(function () {
+    $(document).ready(function () {
 
-    $("#sidebar").mCustomScrollbar({
-      theme: "minimal"
-    });
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
 
-    $('#sidebarCollapse').on('click', function () {
-      // close dropdowns
-      $('.collapse.in').toggleClass('in');
-      // and also adjust aria-expanded attributes we use for the open/closed arrows
-      // in our CSS
-      $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      $('#sidebarCollapse').on('click', function () {
+        // close dropdowns
+        $('.collapse.in').toggleClass('in');
+        // and also adjust aria-expanded attributes we use for the open/closed arrows
+        // in our CSS
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
     });
-  });
   </script>
 </head>
   <body>
