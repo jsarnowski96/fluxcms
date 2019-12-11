@@ -10,6 +10,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { MonitorComponent } from './monitor/monitor.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -19,18 +20,23 @@ import { LoginComponent } from './login/login.component';
     FetchDataComponent,
     MonitorComponent,
     RegistrationComponent,
+    RegistrationComponent
     LoginComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
       HttpClientModule,
     FormsModule,
+    ChartsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
         { path: 'fetch-data', component: FetchDataComponent },
         { path: 'monitor', component: MonitorComponent },
         { path: 'register', component: RegistrationComponent },
         { path: 'login', component: LoginComponent },
+        { path: 'login', component: LoginComponent }
+      { path: 'register', component: RegistrationComponent },
+      { path: 'login', component: LoginComponent }
     ])
   ],
   providers: [],
