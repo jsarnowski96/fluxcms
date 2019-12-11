@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FluxCms.Model.Migrations
 {
     [DbContext(typeof(FluxCmsContext))]
-    [Migration("20191210180001_Fisrt")]
-    partial class Fisrt
+    [Migration("20191211132804_FluxCmsMigration")]
+    partial class FluxCmsMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -44,6 +44,9 @@ namespace FluxCms.Model.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Lastname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Phone")

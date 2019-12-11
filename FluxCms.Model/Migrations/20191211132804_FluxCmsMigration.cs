@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FluxCms.Model.Migrations
 {
-    public partial class Fisrt : Migration
+    public partial class FluxCmsMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -82,6 +82,7 @@ namespace FluxCms.Model.Migrations
                     Lastname = table.Column<string>(nullable: true),
                     Phone = table.Column<int>(nullable: false),
                     Email = table.Column<string>(nullable: true),
+                    Password = table.Column<string>(nullable: true),
                     Authority = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
