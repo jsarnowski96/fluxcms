@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluxCms", "FluxCms.csproj", "{D2D66D19-0071-4278-A01D-09858ABD3B20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluxCms", "FluxCms\FluxCms.csproj", "{D2D66D19-0071-4278-A01D-09858ABD3B20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluxCms.Services", "..\FluxCms.Services\FluxCms.Services.csproj", "{B4C5267B-B587-40AA-AB78-989CB6304E2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluxCms.Services", "FluxCms.Services\FluxCms.Services.csproj", "{B4C5267B-B587-40AA-AB78-989CB6304E2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluxCms.Model", "..\FluxCms.Model\FluxCms.Model.csproj", "{41B7360C-E811-47B5-956A-3AD057F5B6A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluxCms.Model", "FluxCms.Model\FluxCms.Model.csproj", "{41B7360C-E811-47B5-956A-3AD057F5B6A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,3 +3,9 @@
 ################################################################################
 
 /.vs/FluxCms/v16
+/FluxCms.Model/bin/Debug/netcoreapp3.0
+/FluxCms.Model/obj/Debug/netcoreapp3.0
+/FluxCms.Model/obj
+/FluxCms.Services/bin/Debug/netcoreapp3.0
+/FluxCms.Services/obj/Debug/netcoreapp3.0
+/FluxCms.Services/obj
