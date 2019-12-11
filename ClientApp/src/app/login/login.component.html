@@ -1,0 +1,16 @@
+<form id="loginForm" #loginForm="ngForm">
+
+  <input type="text" [(ngModel)]="user.username" #username id="username" name="username" /><br />
+  <input type="password" [(ngModel)]="user.password" #password id="password" name="password" />
+
+
+
+
+
+
+
+
+
+  <button class="button" (click)="login(loginForm.form)">Zaloguj</button>
+
+</form>

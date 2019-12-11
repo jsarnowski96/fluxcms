@@ -34,6 +34,7 @@ namespace FluxCms
                 configuration.RootPath = "ClientApp/dist";
             });
             services.AddTransient<IRegistrationService,RegistrationService>();
+            services.AddTransient<IAuthService,AuthService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

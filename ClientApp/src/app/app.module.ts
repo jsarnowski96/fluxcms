@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { MonitorComponent } from './monitor/monitor.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RegistrationComponent } from './registration/registration.component';
     HomeComponent,
     FetchDataComponent,
     MonitorComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -28,6 +30,7 @@ import { RegistrationComponent } from './registration/registration.component';
         { path: 'fetch-data', component: FetchDataComponent },
         { path: 'monitor', component: MonitorComponent },
         { path: 'register', component: RegistrationComponent },
+        { path: 'login', component: LoginComponent },
     ])
   ],
   providers: [],
