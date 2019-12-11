@@ -20,7 +20,6 @@ import { ChartsModule } from 'ng2-charts';
     FetchDataComponent,
     MonitorComponent,
     RegistrationComponent,
-    RegistrationComponent
     LoginComponent
   ],
   imports: [
@@ -34,7 +33,6 @@ import { ChartsModule } from 'ng2-charts';
         { path: 'monitor', component: MonitorComponent },
         { path: 'register', component: RegistrationComponent },
         { path: 'login', component: LoginComponent },
-        { path: 'login', component: LoginComponent }
       { path: 'register', component: RegistrationComponent },
       { path: 'login', component: LoginComponent }
     ])
