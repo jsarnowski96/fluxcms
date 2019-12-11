@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace FluxCms.Models
+{
+    public partial class Comments
+    {
+        public int Id { get; set; }
+        public string Body { get; set; }
+        public byte IsMarkedAsSpam { get; set; }
+        public string Uri { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public int CreatedBy { get; set; }
+        public int Pageid { get; set; }
+    }
+}
