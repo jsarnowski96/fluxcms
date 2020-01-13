@@ -22,6 +22,12 @@ export class RegistrationComponent implements OnInit {
         console.log(registerForm);
         this.user.username = registerForm.controls.username.value;
         this.user.password = registerForm.controls.password.value;
+        this.user.email = registerForm.controls.email.value;
+      this.user.phone = parseInt(registerForm.controls.phone.value);
+      this.user.firstname = registerForm.controls.firstname.value;
+      this.user.lastname = registerForm.controls.lastname.value;
+      this.user.authority = 1;
+
         console.log(this.user);
         this.registrationService.register(this.user).subscribe(
             (res) => {

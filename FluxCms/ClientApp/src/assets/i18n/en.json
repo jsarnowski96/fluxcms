@@ -1,0 +1,11 @@
+{
+  "registration": {
+    "username": "Login",
+    "password": "Password",
+    "email": "Email",
+    "phone": "Phone number",
+    "name": "Name",
+    "surname": "Surname",
+    "register": "Register"
+  }
+}

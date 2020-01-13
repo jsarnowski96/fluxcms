@@ -1,7 +1,56 @@
 <form id="registerForm" #registerForm="ngForm">
+  <div class="form-group row">
+    <label for="text" class="col-4 col-form-label">{{'registration.username'|translate}}</label>
+    <div class="col-8">
+      <input type="text" [(ngModel)]="user.username" #username id="username" name="username" />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="password" class="col-4 col-form-label">{{'registration.password'|translate}}</label>
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-lock"></i>
+          </div>
+        </div>
+        <input type="password" [(ngModel)]="user.password" #password id="password" name="password" />
 
-  <input type="text" [(ngModel)]="user.username" #username id="username" name="username"/><br />
-  <input type="password"[(ngModel)]="user.password" #password id="password" name="password" />
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="text" class="col-4 col-form-label">{{'registration.email'|translate}}</label>
+    <div class="col-8">
+      <input type="text" [(ngModel)]="user.email" #email id="email" name="email" />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="text" class="col-4 col-form-label">{{'registration.name'|translate}}</label>
+    <div class="col-8">
+      <input type="text" [(ngModel)]="user.firstname" #firstname id="firstname" name="firstname" />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="text" class="col-4 col-form-label">{{'registration.surname'|translate}}</label>
+    <div class="col-8">
+      <input type="text" [(ngModel)]="user.lastname" #lastname id="lastname" name="lastname" />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="text" class="col-4 col-form-label">{{'registration.phone'|translate}}</label>
+    <div class="col-8">
+      <input type="text" [(ngModel)]="user.phone" #phone id="phone" name="phone" />
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+
+
+      <button class="button" (click)="addUser(registerForm.form)">Rejestruj</button>
+    </div>
+  </div>
+  <br />
 
 
 
@@ -10,7 +59,5 @@
 
 
 
-
-  <button class="button" (click)="addUser(registerForm.form)">Rejestruj</button>
 
 </form>

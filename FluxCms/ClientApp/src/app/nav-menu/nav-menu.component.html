@@ -20,6 +20,13 @@
     </div>
 
     <ul class="list-unstyled components">
+      <li>
+        <button (click)="useLanguage('pl')">PL</button>
+      </li>
+      <li>
+        <button (click)="useLanguage('en')">EN</button>
+
+      </li>
       <li class="nav-item active" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
         <a class="nav-link" [routerLink]="['/']">Main page</a>
       </li>

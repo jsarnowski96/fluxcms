@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nav-menu',
@@ -7,7 +8,12 @@ import { Component } from '@angular/core';
 })
 export class NavMenuComponent {
   isExpanded = false;
-
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('pl');
+  }
+  useLanguage(language: string) {
+    this.translate.use(language);
+  }
   collapse() {
     this.isExpanded = false;
   }
