@@ -1,0 +1,12 @@
+
+{
+  "registration": {
+    "username": "Login",
+    "password": "Hasło",
+    "email": "Email",
+    "phone": "Nr telefonu",
+    "name": "Imię",
+    "surname": "Nazwisko",
+    "register": "Rejestruj"
+  }
+}
