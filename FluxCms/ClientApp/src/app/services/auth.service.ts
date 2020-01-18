@@ -16,12 +16,13 @@ export class AuthService {
 
 
 
-    loginUser(user: Users): Observable<boolean> {
-        console.log(window.location.origin);
-        return this.http.post<boolean>(this.baseUrl + "/api/auth/Login", user).pipe(
+  loginUser(user: Users): Observable<number> {
+      console.log(window.location.origin);
+      return this.http.post<number>(this.baseUrl + "/api/auth/Login", user).pipe(
             (res) => {
                 return res;
             }
         )
-    }
+  }
+
 }
