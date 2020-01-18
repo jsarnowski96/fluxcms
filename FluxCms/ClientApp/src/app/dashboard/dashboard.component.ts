@@ -7,11 +7,17 @@ import { Router, CanActivate } from '@angular/router';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit, CanActivate {
-
-  constructor(public auth: AuthService, public router: Router) { }
- 
+export class DashboardComponent implements OnInit {
+  myAuthority: number ;
+  constructor(public auth: AuthService, public router: Router) {
+    }
   ngOnInit() {
+
+    this.auth.getAuthority().subscribe(res => {
+      this.myAuthority = res
+      console.log(this.myAuthority)
+    });
+    console.log(this.myAuthority);
   }
 
 }
