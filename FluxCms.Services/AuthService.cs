@@ -88,12 +88,12 @@ namespace FluxCms.Services
                     Username = u.Username,
                     Authority = u.Authority
                 }).FirstOrDefaultAsync();
+                return user;
             }
-            catch(NullReferenceException ex)
+            catch (NullReferenceException ex)
             {
-                return null;
+                return user;
             }
-            return user;
         }
         public enum LoginStatuses
         {

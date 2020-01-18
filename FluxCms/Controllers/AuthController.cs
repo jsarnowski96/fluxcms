@@ -53,6 +53,19 @@ namespace FluxCms.Controllers
 
             return Ok(result);
         }
+        [HttpGet("[action]")]
+        [Route("GetAuthority")]
+        public async Task<IActionResult> GetAuthority()
+        {
+
+            int? result;
+            if (HttpContext.Session.GetInt32("authority") != null)
+                result = HttpContext.Session.GetInt32("authority");
+            else
+                result = 0;
+
+            return Ok(result);
+        }
         [HttpPost("[action]")]
         [Route("Logout")]
         public async Task<IActionResult> Logout()
