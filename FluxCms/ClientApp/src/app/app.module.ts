@@ -10,12 +10,18 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { ChartsModule } from 'ng2-charts';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService as AuthGuard } from './helpers/auth.guard';
 import { AddPostComponent } from './add-post/add-post.component';
+import { PostsComponent } from './posts/posts.component';
+import { EntriesComponent } from './entries/entries.component';
+import { UsersComponent } from './users/users.component';
+import { RolesComponent } from './roles/roles.component';
+import { ContactComponent } from './contact/contact.component';
+import { PagesComponent } from './pages/pages.component';
+import { CommentsComponent } from './comments/comments.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +31,13 @@ import { AddPostComponent } from './add-post/add-post.component';
     RegistrationComponent,
     LoginComponent,
     DashboardComponent,
+    PostsComponent,
+    EntriesComponent,
+    UsersComponent,
+    RolesComponent,
+    ContactComponent,
+    PagesComponent,
+    CommentsComponent,
     AddPostComponent
   ],
   imports: [
@@ -46,7 +59,14 @@ import { AddPostComponent } from './add-post/add-post.component';
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegistrationComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegistrationComponent },      
+      { path: 'register', component: RegistrationComponent },
+      { path: 'pages', component: PagesComponent },
+      { path: 'posts', component: PostsComponent },
+      { path: 'users', component: UsersComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'comments', component: CommentsComponent },
+      { path: 'roles', component: RolesComponent },
+      { path: 'entries', component: EntriesComponent}
     ])
   ],
   providers: [AuthGuard],
