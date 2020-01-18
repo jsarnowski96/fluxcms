@@ -242,4 +242,4 @@ _Pvt_Extensions
 .fake/
 /.vs/FluxCms/v16
 
-.vs/FluxCms/config/applicationhost.config
+/.vs/FluxCms/config/applicationhost.config
