@@ -53,7 +53,7 @@
         </ul>
       </li>
       <li>
-        <a href="#commentsLink">{{'nav.comments.top'|translate}}</a>
+        <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/comments']">{{'nav.comments.top'|translate}}</a>
       </li>
       <li>
         <a href="#settingSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.settings.top'|translate}}</a>

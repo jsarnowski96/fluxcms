@@ -10,7 +10,6 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { ChartsModule } from 'ng2-charts';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthService } from './services/auth.service';
@@ -21,6 +20,7 @@ import { UsersComponent } from './users/users.component';
 import { RolesComponent } from './roles/roles.component';
 import { ContactComponent } from './contact/contact.component';
 import { PagesComponent } from './pages/pages.component';
+import { CommentsComponent } from './comments/comments.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +35,8 @@ import { PagesComponent } from './pages/pages.component';
     UsersComponent,
     RolesComponent,
     ContactComponent,
-    PagesComponent
+    PagesComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -60,6 +61,7 @@ import { PagesComponent } from './pages/pages.component';
       { path: 'posts', component: PostsComponent },
       { path: 'users', component: UsersComponent },
       { path: 'contact', component: ContactComponent },
+      { path: 'comments', component: CommentsComponent },
       { path: 'roles', component: RolesComponent },
       { path: 'entries', component: EntriesComponent}
     ])

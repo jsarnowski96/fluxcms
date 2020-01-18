@@ -27,27 +27,56 @@
       "all": "All entries",
       "categories": "Categories",
       "add": "Create new entry",
-      "tags": "Tags"
+      "tags": "Tags",
+      "overview": {
+        "title": "Title",
+        "author": "Author",
+        "creationDate": "Date of creation",
+        "editDate": "Date of modification"
+      }
     },
     "pages": {
       "top": "Pages",
       "all": "All pages",
-      "add": "Create new page"
+      "add": "Create new page",
+      "overview": {
+        "title": "Title",
+        "author": "Author",
+        "creationDate": "Date of creation",
+        "editDate": "Date of modification"
+      }
     },
     "comments": {
-      "top": "Comments"
+      "top": "Comments",
+      "overview": {
+        "title": "Title",
+        "author": "Author",
+        "creationDate": "Date of creation",
+        "editDate": "Date of modification"
+      }
     },
     "settings": {
       "roles": {
         "top": "Roles",
         "all": "All roles",
-        "add": "Add new role"
+        "add": "Add new role",
+        "overview": {
+          "name": "Role name",
+          "permissions": "Privileges",
+          "creationDate": "Date of creation"
+        }
       },
       "top": "Settings",
       "users": {
         "top": "Users",
         "all": "All users",
-        "add": "Add new user"
+        "add": "Add new user",
+        "overview": {
+          "username": "Username",
+          "email": "Mail address",
+          "roleId": "Role",
+          "creationDate": "Date of creation"
+        }
       }
     },
     "contact": "Contact"
