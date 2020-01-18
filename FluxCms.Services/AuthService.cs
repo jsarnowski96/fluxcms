@@ -1,5 +1,7 @@
 ﻿using FluxCms.Model;
 using FluxCms.Model.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +14,8 @@ namespace FluxCms.Services
 
     public interface IAuthService
     {
-        Task<bool> Login(Users user);
+        Task<int> Login(Users user);
+        Task<Users> GetSessionData(Users user);
 
     }
 
@@ -28,35 +31,82 @@ namespace FluxCms.Services
         }
 
 
-        public async Task<bool> Login(Users user)
+        public async Task<int> Login(Users user)
         {
-            Users userByLogin=_db.Users.Where(a=>a.Username==user.Username).FirstOrDefault();
-
-
-            string[] parts = userByLogin.Password.Split(new char[] { ':' });
-
-            byte[] saltBytes = Convert.FromBase64String(parts[2]);
-            byte[] derived;
-
-            int iterations = Convert.ToInt32(parts[0]);
-
-            using (var pbkdf2 = new Rfc2898DeriveBytes(
-                user.Password,
-                saltBytes,
-                iterations,
-                HashAlgorithmName.SHA512))
+            try
             {
-                derived = pbkdf2.GetBytes(64);
+                Users userByLogin = await _db.Users.Where(a => a.Username == user.Username).FirstOrDefaultAsync();
+
+
+                string[] parts = userByLogin.Password.Split(new char[] { ':' });
+
+                byte[] saltBytes = Convert.FromBase64String(parts[2]);
+                byte[] derived;
+
+                int iterations = Convert.ToInt32(parts[0]);
+
+                using (var pbkdf2 = new Rfc2898DeriveBytes(
+                    user.Password,
+                    saltBytes,
+                    iterations,
+                    HashAlgorithmName.SHA512))
+                {
+                    derived = pbkdf2.GetBytes(64);
+                }
+
+                string new_hash = string.Format("{0}:{1}:{2}", 2048, Convert.ToBase64String(derived), Convert.ToBase64String(saltBytes));
+
+                if (userByLogin.Password == new_hash)
+                {
+                    
+                    
+                    return (int)LoginStatuses.LogowanieSukces;
+
+
+                }
+                else
+                    return (int)LoginStatuses.BledneDaneLogowania;
+
+            }
+            catch (NullReferenceException NEx)
+            {
+
+                return (int)LoginStatuses.BrakUzytkownika;
+            }
+            catch(Exception ex)
+            {
+                return (int)LoginStatuses.NieznanyKodBledu;
             }
 
-            string new_hash = string.Format("{0}:{1}:{2}", 2048, Convert.ToBase64String(derived), Convert.ToBase64String(saltBytes));
+        }
+        public async Task<Users> GetSessionData(Users user)
+        {
+            try
+            {
+                user = await _db.Users.Where(u => u.Username == user.Username).Select(u => new Users
+                {
+                    Username = u.Username,
+                    Authority = u.Authority
+                }).FirstOrDefaultAsync();
+            }
+            catch(NullReferenceException ex)
+            {
+                return null;
+            }
+            return user;
+        }
+        public enum LoginStatuses
+        {
+            LogowanieSukces=1,
+            BrakUzytkownika=2,
+            BledneDaneLogowania=3,
+            NieznanyKodBledu=4
 
-            if (userByLogin.Password == new_hash)
-                return true;
-            else
-                return false;
-
-
+        }
+        public enum UserAuthorities
+        {
+            Redaktor = 1,
+            Admin = 2
 
         }
     }

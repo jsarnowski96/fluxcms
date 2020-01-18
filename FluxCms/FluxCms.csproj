@@ -41,6 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\helpers\auth.guard.ts" />
     <None Remove="ClientApp\src\app\models\users.ts" />
   </ItemGroup>
 
@@ -50,6 +51,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\helpers\auth.guard.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\models\users.ts" />
   </ItemGroup>
 
