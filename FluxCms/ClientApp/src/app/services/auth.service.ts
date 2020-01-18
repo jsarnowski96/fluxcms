@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { PlatformLocation } from '@angular/common';
 import { Users } from '../models/users';
 import { Observable } from 'rxjs';
-
+import { map } from "rxjs/operators";
 @Injectable({
   providedIn: 'root'
 })
@@ -23,6 +23,9 @@ export class AuthService {
                 return res;
             }
         )
+  }
+  getAuthority(): Observable<number>{
+    return this.http.get(this.baseUrl + "/api/auth/GetAuthority").pipe(map(res => { return res as number }));
   }
 
 }

@@ -7,14 +7,17 @@ import { Router, CanActivate } from '@angular/router';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit, CanActivate {
-    canActivate(route: import("@angular/router").ActivatedRouteSnapshot, state: import("@angular/router").RouterStateSnapshot): boolean | import("@angular/router").UrlTree | import("rxjs").Observable<boolean | import("@angular/router").UrlTree> | Promise<boolean | import("@angular/router").UrlTree> {
-        throw new Error("Method not implemented.");
+export class DashboardComponent implements OnInit {
+  myAuthority: number ;
+  constructor(public auth: AuthService, public router: Router) {
     }
-
-  constructor(public auth: AuthService, public router: Router) { }
- 
   ngOnInit() {
+
+    this.auth.getAuthority().subscribe(res => {
+      this.myAuthority = res
+      console.log(this.myAuthority)
+    });
+    console.log(this.myAuthority);
   }
 
 }
