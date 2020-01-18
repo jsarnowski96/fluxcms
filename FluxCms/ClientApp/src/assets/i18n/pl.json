@@ -5,7 +5,7 @@
     "email": "Email",
     "phone": "Nr telefonu",
     "name": "Imię",
-    "surname": "Nazwisko",
+    "lastname": "Nazwisko",
     "register": "Zarejestruj się"
   },
   "login": {
