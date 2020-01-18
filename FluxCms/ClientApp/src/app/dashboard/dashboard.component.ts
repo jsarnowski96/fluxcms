@@ -8,6 +8,9 @@ import { Router, CanActivate } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit, CanActivate {
+    canActivate(route: import("@angular/router").ActivatedRouteSnapshot, state: import("@angular/router").RouterStateSnapshot): boolean | import("@angular/router").UrlTree | import("rxjs").Observable<boolean | import("@angular/router").UrlTree> | Promise<boolean | import("@angular/router").UrlTree> {
+        throw new Error("Method not implemented.");
+    }
 
   constructor(public auth: AuthService, public router: Router) { }
  
