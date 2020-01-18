@@ -28,7 +28,7 @@
         <a href="#entrySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.entries.top'|translate}}</a>
         <ul class="collapse list-unstyled" id="entrySubmenu">
           <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
-            <a href="#">{{'nav.entries.all'|translate}}</a>
+            <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/entries']">{{'nav.entries.all'|translate}}</a>
           </li>
           <li>
             <a href="#">{{'nav.entries.add'|translate}}</a>
@@ -45,7 +45,7 @@
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.pages.top'|translate}}</a>
         <ul class="collapse list-unstyled" id="pageSubmenu">
           <li>
-            <a href="#">{{'nav.pages.all'|translate}}</a>
+            <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/']">{{'nav.pages.all'|translate}}</a>
           </li>
           <li>
             <a href="#">{{'nav.pages.add'|translate}}</a>
@@ -61,21 +61,21 @@
           <li>
             <a href="#usersSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.settings.users.top'|translate}}</a>
             <ul class="collapse list-unstyled" id="usersSubmenu">
-              <li><a href="#">{{'nav.settings.users.all'|translate}}</a></li>
+              <li><a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/users']">{{'nav.settings.users.all'|translate}}</a></li>
               <li><a href="#">{{'nav.settings.users.add'|translate}}</a></li>
             </ul>
           </li>
           <li>
             <a href="#rolesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.settings.roles.top'|translate}}</a>
             <ul class="collapse list-unstyled" id="rolesSubmenu">
-              <li><a href="#">{{'nav.settings.roles.all'|translate}}</a></li>
+              <li><a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/roles']">{{'nav.settings.roles.all'|translate}}</a></li>
               <li><a href="#">{{'nav.settings.roles.add'|translate}}</a></li>
             </ul>
           </li>
         </ul>
       </li>
       <li>
-        <a href="#">{{'nav.contact'|translate}}</a>
+        <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/contact']">{{'nav.contact'|translate}}</a>
       </li>
     </ul>
     <!-- Footer -->

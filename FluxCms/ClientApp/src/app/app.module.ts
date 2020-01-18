@@ -20,6 +20,7 @@ import { EntriesComponent } from './entries/entries.component';
 import { UsersComponent } from './users/users.component';
 import { RolesComponent } from './roles/roles.component';
 import { ContactComponent } from './contact/contact.component';
+import { PagesComponent } from './pages/pages.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { ContactComponent } from './contact/contact.component';
     EntriesComponent,
     UsersComponent,
     RolesComponent,
-    ContactComponent
+    ContactComponent,
+    PagesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -53,7 +55,13 @@ import { ContactComponent } from './contact/contact.component';
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegistrationComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegistrationComponent },      
+      { path: 'register', component: RegistrationComponent },
+      { path: 'pages', component: PagesComponent },
+      { path: 'posts', component: PostsComponent },
+      { path: 'users', component: UsersComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'roles', component: RolesComponent },
+      { path: 'entries', component: EntriesComponent}
     ])
   ],
   providers: [AuthGuard],
