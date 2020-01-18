@@ -18,15 +18,9 @@
       <h3 class="text-center">Flux Cms</h3>
       <h4 class="text-center">Dashboard</h4>
     </div>
-
+    <button (click)="useLanguage('pl')" class="btn btn-outline-secondary" type="button">PL</button>&nbsp;
+    <button (click)="useLanguage('en')" class="btn btn-outline-primary" type="button">EN</button>
     <ul class="list-unstyled components">
-      <li>
-        <button (click)="useLanguage('pl')" class = "btn btn-info" style="display:inline-block !important" type="button">PL</button>
-      </li>
-      <li>
-        <button (click)="useLanguage('en')" class = "btn btn-info" style="display:inline-block !important" type="button">EN</button>
-
-      </li>
       <li class="nav-item active" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
         <a class="nav-link" [routerLink]="['/']">{{'nav.mainPage'|translate}}</a>
       </li>

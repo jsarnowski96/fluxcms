@@ -15,6 +15,11 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService as AuthGuard } from './helpers/auth.guard';
+import { PostsComponent } from './posts/posts.component';
+import { EntriesComponent } from './entries/entries.component';
+import { UsersComponent } from './users/users.component';
+import { RolesComponent } from './roles/roles.component';
+import { ContactComponent } from './contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +28,12 @@ import { AuthGuardService as AuthGuard } from './helpers/auth.guard';
     HomeComponent,
     RegistrationComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    PostsComponent,
+    EntriesComponent,
+    UsersComponent,
+    RolesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
