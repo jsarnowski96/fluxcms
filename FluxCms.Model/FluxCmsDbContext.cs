@@ -26,7 +26,7 @@ namespace FluxCms.Model
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=localhost;Database=FluxCms;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=localhost;Database=FluxCms;Integrated Security=False;User Id=sa;password=Zagubieni434;");
             }
         }
 

@@ -9,3 +9,4 @@
 /FluxCms.Services/bin/Debug/netcoreapp3.0
 /FluxCms.Services/obj/Debug/netcoreapp3.0
 /FluxCms.Services/obj
+/ClientApp/node_modules

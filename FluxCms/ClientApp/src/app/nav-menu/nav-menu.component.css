@@ -65,6 +65,9 @@ a, a:hover, a:focus {
   color: #fff;
   transition: all 0.3s;
 }
+  #sidebar>button {
+      display: inline-flex;
+  }
 
   #sidebar .sidebar-header {
     padding: 20px;

@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { MonitorComponent } from './monitor/monitor.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { ChartsModule } from 'ng2-charts';
@@ -22,7 +21,6 @@ import { AuthGuardService as AuthGuard } from './helpers/auth.guard';
     DashboardComponent,
     NavMenuComponent,
     HomeComponent,
-    MonitorComponent,
     RegistrationComponent,
     LoginComponent,
     DashboardComponent
@@ -41,11 +39,11 @@ import { AuthGuardService as AuthGuard } from './helpers/auth.guard';
     ChartsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'monitor', component: MonitorComponent },
       { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-        { path: 'login', component: LoginComponent },
+      { path: 'login', component: LoginComponent },
       { path: 'register', component: RegistrationComponent },
-      { path: 'login', component: LoginComponent }
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegistrationComponent },      
     ])
   ],
   providers: [AuthGuard],

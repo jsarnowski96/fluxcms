@@ -1,4 +1,3 @@
-
 {
   "registration": {
     "username": "Login",
@@ -7,6 +6,47 @@
     "phone": "Nr telefonu",
     "name": "Imię",
     "surname": "Nazwisko",
-    "register": "Rejestruj"
+    "register": "Zarejestruj się"
+  },
+  "login": {
+    "login": "Zaloguj",
+    "password": "Hasło",
+    "register": "Zarejestruj się",
+    "username": "Login"
+  },
+  "dashboard": {
+    "welcomeMessage": "Witaj ponownie, "
+  },
+  "nav": {
+    "mainPage": "Strona główna",
+    "entries": {
+      "top": "Posty",
+      "all": "Wszystkie posty",
+      "categories": "Kategorie",
+      "add": "Dodaj nowy post",
+      "tags": "Tagi"
+    },
+    "pages": {
+      "top": "Strony",
+      "all": "Wszystkie strony",
+      "add": "Dodaj nową stronę"
+    },
+    "comments": {
+      "top": "Komentarze"
+    },
+    "settings": {
+      "roles": {
+        "top": "Role",
+        "all": "Wszystkie role",
+        "add": "Dodaj nową rolę"
+      },
+      "top": "Ustawienia",
+      "users": {
+        "top": "Użytkownicy",
+        "all": "Wszyscy użytkownicy",
+        "add": "Dodaj nowego użytkownika"
+      }
+    },
+    "contact": "Kontakt"
   }
 }

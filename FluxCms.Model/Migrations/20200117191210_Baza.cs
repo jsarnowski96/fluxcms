@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FluxCms.Model.Migrations
 {
-    public partial class FluxCmsMigration : Migration
+    public partial class Baza : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
