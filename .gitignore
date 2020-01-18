@@ -240,3 +240,5 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 /.vs/FluxCms/v16
+
+.vs/FluxCms/config/applicationhost.config
