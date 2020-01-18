@@ -21,70 +21,67 @@
 
     <ul class="list-unstyled components">
       <li>
-        <button (click)="useLanguage('pl')">PL</button>
+        <button (click)="useLanguage('pl')" class = "btn btn-info" style="display:inline-block !important" type="button">PL</button>
       </li>
       <li>
-        <button (click)="useLanguage('en')">EN</button>
+        <button (click)="useLanguage('en')" class = "btn btn-info" style="display:inline-block !important" type="button">EN</button>
 
       </li>
       <li class="nav-item active" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
-        <a class="nav-link" [routerLink]="['/']">Main page</a>
+        <a class="nav-link" [routerLink]="['/']">{{'nav.mainPage'|translate}}</a>
       </li>
       <li>
-        <a href="#entrySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Entries</a>
+        <a href="#entrySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.entries.top'|translate}}</a>
         <ul class="collapse list-unstyled" id="entrySubmenu">
           <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
-            <a href="#">All entries</a>
+            <a href="#">{{'nav.entries.all'|translate}}</a>
           </li>
           <li>
-            <a href="#">Add new entry</a>
+            <a href="#">{{'nav.entries.add'|translate}}</a>
           </li>
           <li>
-            <a href="#">Categories</a>
+            <a href="#">{{'nav.entries.categories'|translate}}</a>
           </li>
           <li>
-            <a href="#">Tags</a>
+            <a href="#">{{'nav.entries.tags'|translate}}</a>
           </li>
         </ul>
       </li>
       <li>
-        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.pages.top'|translate}}</a>
         <ul class="collapse list-unstyled" id="pageSubmenu">
           <li>
-            <a href="#">All pages</a>
+            <a href="#">{{'nav.pages.all'|translate}}</a>
           </li>
           <li>
-            <a href="#">Add new page</a>
+            <a href="#">{{'nav.pages.add'|translate}}</a>
           </li>
         </ul>
       </li>
       <li>
-        <a href="#commentsLink">Comments</a>
+        <a href="#commentsLink">{{'nav.comments.top'|translate}}</a>
       </li>
       <li>
-        <a href="#settingSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Settings</a>
+        <a href="#settingSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.settings.top'|translate}}</a>
         <ul class="collapse list-unstyled" id="settingSubmenu">
           <li>
-            <a href="#usersSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Users</a>
+            <a href="#usersSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.settings.users.top'|translate}}</a>
             <ul class="collapse list-unstyled" id="usersSubmenu">
-              <li><a href="#">All users</a></li>
-              <li><a href="#">Add new user</a></li>
+              <li><a href="#">{{'nav.settings.users.all'|translate}}</a></li>
+              <li><a href="#">{{'nav.settings.users.add'|translate}}</a></li>
             </ul>
           </li>
           <li>
-            <a href="#rolesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Roles</a>
+            <a href="#rolesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.settings.roles.top'|translate}}</a>
             <ul class="collapse list-unstyled" id="rolesSubmenu">
-              <li><a href="#">All roles</a></li>
-              <li><a href="#">Add new role</a></li>
+              <li><a href="#">{{'nav.settings.roles.all'|translate}}</a></li>
+              <li><a href="#">{{'nav.settings.roles.add'|translate}}</a></li>
             </ul>
           </li>
         </ul>
       </li>
       <li>
-        <a href="#">Portfolio</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
+        <a href="#">{{'nav.contact'|translate}}</a>
       </li>
     </ul>
     <!-- Footer -->

@@ -1,11 +1,55 @@
 {
   "registration": {
-    "username": "Login",
+    "username": "Username",
     "password": "Password",
     "email": "Email",
     "phone": "Phone number",
     "name": "Name",
-    "surname": "Surname",
+    "lastname": "Last name",
     "register": "Register"
+  },
+
+  "login": {
+    "login": "Login",
+    "password": "Password",
+    "register": "Register",
+    "username": "Username"
+  },
+
+  "dashboard": {
+    "welcomeMessage": "Welome back, "
+  },
+
+  "nav": {
+    "mainPage": "Main page",
+    "entries": {
+      "top": "Entries",
+      "all": "All entries",
+      "categories": "Categories",
+      "add": "Create new entry",
+      "tags": "Tags"
+    },
+    "pages": {
+      "top": "Pages",
+      "all": "All pages",
+      "add": "Create new page"
+    },
+    "comments": {
+      "top": "Comments"
+    },
+    "settings": {
+      "roles": {
+        "top": "Roles",
+        "all": "All roles",
+        "add": "Add new role"
+      },
+      "top": "Settings",
+      "users": {
+        "top": "Users",
+        "all": "All users",
+        "add": "Add new user"
+      }
+    },
+    "contact": "Contact"
   }
 }

@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { MonitorComponent } from './monitor/monitor.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { ChartsModule } from 'ng2-charts';
@@ -20,7 +19,6 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
     NavMenuComponent,
     HomeComponent,
     FetchDataComponent,
-    MonitorComponent,
     RegistrationComponent,
     LoginComponent
   ],
@@ -38,12 +36,10 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
     ChartsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-        { path: 'fetch-data', component: FetchDataComponent },
-        { path: 'monitor', component: MonitorComponent },
-        { path: 'register', component: RegistrationComponent },
-        { path: 'login', component: LoginComponent },
+      { path: 'fetch-data', component: FetchDataComponent },
       { path: 'register', component: RegistrationComponent },
-      { path: 'login', component: LoginComponent }
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegistrationComponent },      
     ])
   ],
   providers: [],
