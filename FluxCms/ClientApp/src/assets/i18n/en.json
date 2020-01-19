@@ -17,7 +17,8 @@
   },
 
   "dashboard": {
-    "welcomeMessage": "Welome back, "
+    "welcomeMessage": "Welome back, ",
+    "actions": "Actions"
   },
 
   "nav": {

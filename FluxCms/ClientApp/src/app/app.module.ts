@@ -14,13 +14,16 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService as AuthGuard } from './helpers/auth.guard';
-import { PostsComponent } from './posts/posts.component';
 import { EntriesComponent } from './entries/entries.component';
 import { UsersComponent } from './users/users.component';
 import { RolesComponent } from './roles/roles.component';
 import { ContactComponent } from './contact/contact.component';
 import { PagesComponent } from './pages/pages.component';
 import { CommentsComponent } from './comments/comments.component';
+import { AddNewEntryComponent } from './add-new-entry/add-new-entry.component';
+import { AddNewPageComponent } from './add-new-page/add-new-page.component';
+import { AddNewUserComponent } from './add-new-user/add-new-user.component';
+import { AddNewRoleComponent } from './add-new-role/add-new-role.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,13 +33,16 @@ import { CommentsComponent } from './comments/comments.component';
     RegistrationComponent,
     LoginComponent,
     DashboardComponent,
-    PostsComponent,
     EntriesComponent,
     UsersComponent,
     RolesComponent,
     ContactComponent,
     PagesComponent,
-    CommentsComponent
+    CommentsComponent,
+    AddNewEntryComponent,
+    AddNewPageComponent,
+    AddNewUserComponent,
+    AddNewRoleComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -58,7 +64,6 @@ import { CommentsComponent } from './comments/comments.component';
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegistrationComponent },
       { path: 'pages', component: PagesComponent },
-      { path: 'posts', component: PostsComponent },
       { path: 'users', component: UsersComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'comments', component: CommentsComponent },

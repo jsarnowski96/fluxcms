@@ -15,7 +15,8 @@
     "username": "Login"
   },
   "dashboard": {
-    "welcomeMessage": "Witaj ponownie, "
+    "welcomeMessage": "Witaj ponownie, ",
+      "actions": "Akcje"
   },
   "nav": {
     "mainPage": "Strona główna",
