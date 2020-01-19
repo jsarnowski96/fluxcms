@@ -33,6 +33,7 @@ namespace FluxCms.Controllers
             {
                 user = await _authService.GetSessionData(user);
                 HttpContext.Session.SetString("username", user.Username);
+                HttpContext.Session.SetInt32("userid", user.Id);
                 HttpContext.Session.SetInt32("authority", user.Authority);
             }
 

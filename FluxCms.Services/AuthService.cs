@@ -85,6 +85,7 @@ namespace FluxCms.Services
             {
                 user = await _db.Users.Where(u => u.Username == user.Username).Select(u => new Users
                 {
+                    Id=u.Id,
                     Username = u.Username,
                     Authority = u.Authority
                 }).FirstOrDefaultAsync();
