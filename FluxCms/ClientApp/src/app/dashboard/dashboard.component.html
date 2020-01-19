@@ -1,4 +1,10 @@
+
 <p *ngIf="myAuthority==2">dashboard works!</p>
+
+<table>
+  <tr class="table table-striped" *ngFor="let p of postList"><td>{{p.title}}</td></tr>
+</table>
+
 <div class="content">
   <h1 class="text-center">{{'dashboard.welcomeMessage'|translate}}</h1><hr />
   <div class="d-flex justify-content-start">
@@ -65,6 +71,7 @@
           </tr>
         </tbody>
       </table>
+      <button class="btn-primary btn-primary" (click)="createPost()">Dodaj post</button>
     </div>
     <div class="container">
       <span>Span 2</span>
@@ -193,6 +200,11 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+  <div class="row" *ngIf="addPost">
+    <div class="col-md-12">
+      <app-add-post (addPostEvent)="reloadPosts()"></app-add-post>
     </div>
   </div>
 </div>

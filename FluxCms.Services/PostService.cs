@@ -1,5 +1,7 @@
-﻿using FluxCms.Model;
+﻿
+using FluxCms.Model;
 using FluxCms.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,7 +13,8 @@ namespace FluxCms.Services
 {
     public interface IPostService
     {
-
+        Task<List<Posts>> GetPostList();
+        Task<bool> AddNewPost(Posts newPost);
     }
     public class PostService : IPostService
     {
@@ -30,6 +33,22 @@ namespace FluxCms.Services
             postsList = await _db.Posts.OrderBy(d=>d.CreatedAt).ToListAsync();
 
             return postsList;
+        }
+        public async Task<bool> AddNewPost(Posts newPost)
+        {
+            try
+            {
+
+                await _db.Posts.AddAsync(newPost);
+                await _db.SaveChangesAsync();
+                return true;
+            }
+            catch(Exception ex)
+            {
+               
+                return false;
+            }
+
         }
     }
 }

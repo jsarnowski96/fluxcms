@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpRequest, HttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -14,6 +14,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService as AuthGuard } from './helpers/auth.guard';
+import { AddPostComponent } from './add-post/add-post.component';
 import { PostsComponent } from './posts/posts.component';
 import { EntriesComponent } from './entries/entries.component';
 import { UsersComponent } from './users/users.component';
@@ -36,11 +37,13 @@ import { CommentsComponent } from './comments/comments.component';
     RolesComponent,
     ContactComponent,
     PagesComponent,
-    CommentsComponent
+    CommentsComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-      HttpClientModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
     TranslateModule.forRoot({
       loader: {
