@@ -66,7 +66,8 @@ a, a:hover, a:focus {
   transition: all 0.3s;
 }
   #sidebar>button {
-      display: inline-flex;
+      text-align:center;
+      margin-left: 10%;
   }
 
   #sidebar .sidebar-header {
@@ -131,4 +132,8 @@ a[data-toggle="collapse"] {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
+}
+
+nav {
+    margin-bottom: 1vh;
 }

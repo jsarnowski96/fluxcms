@@ -15,7 +15,8 @@
     "username": "Login"
   },
   "dashboard": {
-    "welcomeMessage": "Witaj ponownie, "
+    "welcomeMessage": "Witaj ponownie, ",
+      "actions": "Akcje"
   },
   "nav": {
     "mainPage": "Strona główna",
@@ -24,27 +25,56 @@
       "all": "Wszystkie posty",
       "categories": "Kategorie",
       "add": "Dodaj nowy post",
-      "tags": "Tagi"
+      "tags": "Tagi",
+      "overview": {
+        "title": "Tytuł",
+        "author": "Autor",
+        "creationDate": "Data utworzenia",
+        "editDate":  "Data modyfikacji"
+      }
     },
     "pages": {
       "top": "Strony",
       "all": "Wszystkie strony",
-      "add": "Dodaj nową stronę"
+      "add": "Dodaj nową stronę",
+      "overview": {
+        "title": "Tytuł",
+        "author": "Autor",
+        "creationDate": "Data utworzenia",
+        "editDate": "Data modyfikacji"
+      }
     },
     "comments": {
-      "top": "Komentarze"
+      "top": "Komentarze",
+      "overview": {
+        "title": "Tytuł",
+        "author": "Autor",
+        "creationDate": "Data utworzenia",
+        "editDate": "Data modyfikacji"
+      }
     },
     "settings": {
       "roles": {
         "top": "Role",
         "all": "Wszystkie role",
-        "add": "Dodaj nową rolę"
+        "add": "Dodaj nową rolę",
+        "overview": {
+          "name": "Nazwa roli",
+          "permissions": "Uprawnienia",
+          "creationDate": "Data utworzenia"
+        }
       },
       "top": "Ustawienia",
       "users": {
         "top": "Użytkownicy",
         "all": "Wszyscy użytkownicy",
-        "add": "Dodaj nowego użytkownika"
+        "add": "Dodaj nowego użytkownika",
+        "overview": {
+          "username": "Nazwa użytkownika",
+          "email": "Adres mailowy",
+          "roleId": "Rola",
+          "creationDate": "Data utworzenia"
+        }
       }
     },
     "contact": "Kontakt"
