@@ -15,13 +15,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService as AuthGuard } from './helpers/auth.guard';
 import { AddPostComponent } from './add-post/add-post.component';
-import { PostsComponent } from './posts/posts.component';
 import { EntriesComponent } from './entries/entries.component';
 import { UsersComponent } from './users/users.component';
 import { RolesComponent } from './roles/roles.component';
 import { ContactComponent } from './contact/contact.component';
 import { PagesComponent } from './pages/pages.component';
 import { CommentsComponent } from './comments/comments.component';
+import { AddNewEntryComponent } from './add-new-entry/add-new-entry.component';
+import { AddNewPageComponent } from './add-new-page/add-new-page.component';
+import { AddNewUserComponent } from './add-new-user/add-new-user.component';
+import { AddNewRoleComponent } from './add-new-role/add-new-role.component';
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 import { PostDetailsComponent } from './post-details/post-details.component';
 @NgModule({
@@ -33,13 +36,17 @@ import { PostDetailsComponent } from './post-details/post-details.component';
     RegistrationComponent,
     LoginComponent,
     DashboardComponent,
-    PostsComponent,
     EntriesComponent,
     UsersComponent,
     RolesComponent,
     ContactComponent,
     PagesComponent,
     CommentsComponent,
+    AddNewEntryComponent,
+    AddNewPageComponent,
+    AddNewUserComponent,
+    AddNewRoleComponent,
+    AddPostComponent,
     AddPostComponent,
     PostDetailsComponent
   ],
@@ -63,9 +70,8 @@ import { PostDetailsComponent } from './post-details/post-details.component';
       { path: 'register', component: RegistrationComponent },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegistrationComponent },
-      { path: 'pages', component: PagesComponent, canActivate: [AuthGuard]  },
-      { path: 'posts', component: PostsComponent, canActivate: [AuthGuard]  },
-      { path: 'users', component: UsersComponent, canActivate: [AuthGuard]  },
+      { path: 'pages', component: PagesComponent },
+      { path: 'users', component: UsersComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'post/:id', component: PostDetailsComponent },
       { path: 'comments', component: CommentsComponent, canActivate: [AuthGuard]  },

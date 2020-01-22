@@ -1,16 +1,25 @@
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">{{'nav.settings.roles.overview.name'|translate}}</th>
-      <th scope="col">{{'nav.settings.roles.overview.permissions'|translate}}</th>
-      <th scope="col">{{'nav.settings.roles.overview.creationDate'|translate}}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"></th>
+<p *ngIf="myAuthority==2">dashboard works!</p>
+<div class="content">
+  <h1 class="text-center">{{'nav.settings.roles.top'|translate}}</h1><hr />
+  <div class="d-flex justify-content-start">
+    <div class="container">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">{{'nav.settings.roles.overview.name'|translate}}</th>
+            <th scope="col">{{'nav.settings.roles.overview.permissions'|translate}}</th>
+            <th scope="col">{{'nav.settings.roles.overview.creationDate'|translate}}</th>
+            <th scope="col">{{'dashboard.actions'|translate}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"></th>
 
-    </tr>
-  </tbody>
-</table>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
