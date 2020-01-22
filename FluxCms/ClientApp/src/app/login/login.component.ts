@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Users } from '../models/users';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
@@ -14,8 +14,11 @@ export class LoginComponent implements OnInit {
         this.user = new Users();
 
     }
-
   ngOnInit() {
+    this._authService.isLoggedIn().subscribe(res => {
+      if (res == true)
+        this._router.navigate([""]);
+    })
   }
 
     login(loginForm: any) {

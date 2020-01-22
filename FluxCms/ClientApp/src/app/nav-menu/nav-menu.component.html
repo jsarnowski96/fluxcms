@@ -24,7 +24,7 @@
       <li class="nav-item active" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
         <a class="nav-link" [routerLink]="['/']">{{'nav.mainPage'|translate}}</a>
       </li>
-      <li>
+      <!--<li *ngIf="authority>0">
         <a href="#entrySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.entries.top'|translate}}</a>
         <ul class="collapse list-unstyled" id="entrySubmenu">
           <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
@@ -40,8 +40,8 @@
             <a href="#">{{'nav.entries.tags'|translate}}</a>
           </li>
         </ul>
-      </li>
-      <li>
+      </li>-->
+      <!--<li *ngIf="authority==2">
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.pages.top'|translate}}</a>
         <ul class="collapse list-unstyled" id="pageSubmenu">
           <li>
@@ -51,11 +51,11 @@
             <a href="#">{{'nav.pages.add'|translate}}</a>
           </li>
         </ul>
-      </li>
-      <li>
+      </li>-->
+      <li *ngIf="authority>0">
         <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/comments']">{{'nav.comments.top'|translate}}</a>
       </li>
-      <li>
+      <li *ngIf="authority==2">
         <a href="#settingSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.settings.top'|translate}}</a>
         <ul class="collapse list-unstyled" id="settingSubmenu">
           <li>
@@ -65,17 +65,23 @@
               <li><a href="#">{{'nav.settings.users.add'|translate}}</a></li>
             </ul>
           </li>
-          <li>
+          <!--<li>
             <a href="#rolesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.settings.roles.top'|translate}}</a>
             <ul class="collapse list-unstyled" id="rolesSubmenu">
               <li><a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/roles']">{{'nav.settings.roles.all'|translate}}</a></li>
               <li><a href="#">{{'nav.settings.roles.add'|translate}}</a></li>
             </ul>
-          </li>
+          </li>-->
         </ul>
       </li>
       <li>
         <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/contact']">{{'nav.contact'|translate}}</a>
+      </li>
+      <li *ngIf="isLoggedIn">
+        <a class="nav-link pointer" [routerLinkActive]="['link-active']" (click)="logout()">{{'nav.logout'|translate}}</a>
+      </li>
+      <li *ngIf="!isLoggedIn">
+        <a class="nav-link pointer" [routerLinkActive]="['link-active']" [routerLink]="['/login']">{{'nav.login'|translate}}</a>
       </li>
     </ul>
     <!-- Footer -->

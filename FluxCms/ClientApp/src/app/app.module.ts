@@ -22,6 +22,8 @@ import { RolesComponent } from './roles/roles.component';
 import { ContactComponent } from './contact/contact.component';
 import { PagesComponent } from './pages/pages.component';
 import { CommentsComponent } from './comments/comments.component';
+import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import { PostDetailsComponent } from './post-details/post-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,8 @@ import { CommentsComponent } from './comments/comments.component';
     ContactComponent,
     PagesComponent,
     CommentsComponent,
-    AddPostComponent
+    AddPostComponent,
+    PostDetailsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -60,16 +63,19 @@ import { CommentsComponent } from './comments/comments.component';
       { path: 'register', component: RegistrationComponent },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegistrationComponent },
-      { path: 'pages', component: PagesComponent },
-      { path: 'posts', component: PostsComponent },
-      { path: 'users', component: UsersComponent },
+      { path: 'pages', component: PagesComponent, canActivate: [AuthGuard]  },
+      { path: 'posts', component: PostsComponent, canActivate: [AuthGuard]  },
+      { path: 'users', component: UsersComponent, canActivate: [AuthGuard]  },
       { path: 'contact', component: ContactComponent },
-      { path: 'comments', component: CommentsComponent },
-      { path: 'roles', component: RolesComponent },
-      { path: 'entries', component: EntriesComponent}
+      { path: 'post/:id', component: PostDetailsComponent },
+      { path: 'comments', component: CommentsComponent, canActivate: [AuthGuard]  },
+      { path: 'roles', component: RolesComponent, canActivate: [AuthGuard] },
+      { path: 'entries', component: EntriesComponent, canActivate: [AuthGuard] }
     ])
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard,
+    { provide: 'SnotifyToastConfig', useValue: ToastDefaults },
+    SnotifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
