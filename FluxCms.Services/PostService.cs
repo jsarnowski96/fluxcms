@@ -14,6 +14,7 @@ namespace FluxCms.Services
     public interface IPostService
     {
         Task<List<Posts>> GetPostList();
+        Task<bool> BanComment(Comments commentForBan);
         Task<List<Comments>> GetCommentsListForPost(int postId);
         Task<Posts> GetPostById(int id);
         Task<Comments> GetCommentById(int id);
@@ -70,6 +71,22 @@ namespace FluxCms.Services
             {
 
                 await _db.Posts.AddAsync(newPost);
+                await _db.SaveChangesAsync();
+                return true;
+            }
+            catch(Exception ex)
+            {
+               
+                return false;
+            }
+
+        }     
+        public async Task<bool> BanComment(Comments comment)
+        {
+            try
+            {
+
+                comment.IsMarkedAsSpam = !comment.IsMarkedAsSpam;
                 await _db.SaveChangesAsync();
                 return true;
             }

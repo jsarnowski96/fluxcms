@@ -4,14 +4,16 @@ using FluxCms.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FluxCms.Model.Migrations
 {
     [DbContext(typeof(FluxCmsContext))]
-    partial class FluxCmsContextModelSnapshot : ModelSnapshot
+    [Migration("20200122214459_spam")]
+    partial class spam
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

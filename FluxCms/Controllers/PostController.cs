@@ -42,8 +42,8 @@ namespace FluxCms.Controllers
 
 
 
-            commentForBan.IsMarkedAsSpam = !commentForBan.IsMarkedAsSpam;
 
+            var res = await _postService.BanComment(commentForBan);
             return Ok(1);
         }        
         [HttpPost("[action]"), DisableRequestSizeLimit]

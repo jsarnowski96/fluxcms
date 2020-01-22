@@ -2,5 +2,5 @@
 
 
 <div *ngFor="let c of comments">
-  {{c.body}}
+  {{c.body}} <button *ngIf="authority>0" class="btn-primary btn" id="{{c.id}}" (click)="banComment($event)" > </button>
 </div>

@@ -35,6 +35,13 @@ export class PostService {
         return res;
       }
     )
+  } banComment(commentId: number): Observable<number> {
+
+    return this.http.post<number>(this.baseUrl + "/api/posts/AddComment", commentId).pipe(
+      (res) => {
+        return res;
+      }
+    )
   }
 
 
