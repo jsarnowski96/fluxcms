@@ -25,6 +25,7 @@
 
   "nav": {
     "mainPage": "Main page",
+    "logout":  "Logout",
     "entries": {
       "top": "Entries",
       "all": "All entries",

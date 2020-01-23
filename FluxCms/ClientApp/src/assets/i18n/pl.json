@@ -26,6 +26,7 @@
 
   "nav": {
     "mainPage": "Strona główna",
+    "logout": "Wyloguj",
     "entries": {
       "top": "Posty",
       "all": "Wszystkie posty",
