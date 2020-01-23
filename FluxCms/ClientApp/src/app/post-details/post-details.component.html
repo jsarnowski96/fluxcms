@@ -1,26 +1,42 @@
-{{post.title}}
-
-  <form id="commentForm" #commentForm="ngForm" [formGroup]="commentFG">
-    <div class="form-group row">
-      <label for="text" class="col-4 col-form-label">Nick</label>
-      <div class="col-8">
-        <input type="text" formControlName="nick" #title id="nick" name="nick" />
+<app-nav-menu></app-nav-menu>
+<div class="card-header">{{post.title}}</div>
+<div *ngFor="let c of comments">
+  <p>  {{c.body}} <button *ngIf="authority>0" class="btn-primary btn" id="{{c.id}}" (click)="banComment($event)"> Ukryj komentarz</button></p>
+</div>
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">{{'nav.addPost.title'|translate}}</div>
+      <div class="card-body">
+        <form id="commentForm" #commentForm="ngForm" [formGroup]="commentFG">
+          <div class="form-group">
+            <input type="text" formControlName="nick" #title id="nick" name="nick" class="form-control" placeholder="Nick" required minlength="3">
+            <div *ngIf="nick.invalid && (nick.dirty || nick.touched)" class="alert alert-danger">
+              <div *ngIf="nick.errors.required">
+                Pole 'Nick' jest wymagane.
+              </div>
+              <div *ngIf="nick.errors.minlength">
+                Nick musi mieć co najmniej 3 znaki.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">{{'nav.addPost.message'|translate}}</label>
+            <textarea formControlName="comment" #tags id="comment" name="comment" rows="5" placeholder="{{'nav.comments.comment'|translate}}" required minlength="10"></textarea>
+            <div *ngIf="comment.invalid && (comment.dirty || comment.touched)" class="alert alert-danger">
+              <div *ngIf="comment.errors.required">
+                Komentarz nie może być pusty.
+              </div>
+              <div *ngIf="firstname.errors.minlength">
+                Komentarz musi mieć co najmniej 10 znaków.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="button" (click)="addComment(commentForm.form)">{{'nav.comments.add'|translate}}</button>
+          </div>
+        </form>
       </div>
     </div>
-    <div class="form-group row">
-      <label for="text" class="col-4 col-form-label">Komenarz</label>
-      <div class="col-8">
-        <textarea formControlName="comment" #tags id="comment" name="comment" ></textarea>
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="offset-4 col-8">
-        <button class="button" (click)="addComment(commentForm.form)">Dodaj komentarz</button>
-      </div>
-    </div>
-    <br />
-  </form>
-  <div *ngFor="let c of comments">
-    <p>  {{c.body}} <button *ngIf="authority>0" class="btn-primary btn" id="{{c.id}}" (click)="banComment($event)"> Ukryj komentarz</button></p>
-
   </div>
+</div>

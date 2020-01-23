@@ -58,6 +58,8 @@
 
     "comments": {
       "top": "Komentarze",
+      "add": "Dodaj komentarz",
+      "comment": "Komentarz",
       "overview": {
         "title": "Tytuł",
         "author": "Autor",
