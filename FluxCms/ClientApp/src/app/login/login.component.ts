@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
             switch (res) {
 
               case 1: {
-                alert("Logowanie zakończone sukcesem")
                 this._router.navigate(['/dashboard'])
          
                 break;

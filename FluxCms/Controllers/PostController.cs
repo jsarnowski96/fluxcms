@@ -35,7 +35,7 @@ namespace FluxCms.Controllers
             return Ok(1);
         }
         [HttpGet]
-        [Route("[action]/{id:int}")]
+        [Route("[action]/{commentId:int}")]
         public async Task<IActionResult> BanComment(int commentId)
         {
            Comments commentForBan = await _postService.GetCommentById(commentId);
@@ -75,7 +75,7 @@ namespace FluxCms.Controllers
             return Ok(lp);
         }        
         [HttpGet]
-        [Route("GetCommentsForPost/{id:int}")]
+        [Route("GetCommentsForPost/{postId:int}")]
         public async Task<IActionResult> GetCommentsForPost(int postId)
         {
             List<Comments> lc = new List<Comments>();
