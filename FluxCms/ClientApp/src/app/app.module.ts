@@ -64,8 +64,6 @@ import { AddNewRoleComponent } from './add-new-role/add-new-role.component';
       { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegistrationComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegistrationComponent },
       { path: 'pages', component: PagesComponent },
       { path: 'users', component: UsersComponent },
       { path: 'contact', component: ContactComponent },
