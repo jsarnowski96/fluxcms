@@ -36,6 +36,7 @@
       "overview": {
         "title": "Tytuł",
         "author": "Autor",
+        "body": "Treść",
         "creationDate": "Data utworzenia",
         "editDate": "Data modyfikacji"
       }

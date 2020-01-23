@@ -35,6 +35,7 @@
       "overview": {
         "title": "Title",
         "author": "Author",
+        "body" "Body",
         "creationDate": "Date of creation",
         "editDate": "Date of modification"
       }
