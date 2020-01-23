@@ -72,15 +72,13 @@ import { PostDetailsComponent } from './post-details/post-details.component';
       { path: 'comments', component: CommentsComponent },
       { path: 'roles', component: RolesComponent },
       { path: 'posts', component: PostsComponent },
-      { path: 'add-new-post', component: AddNewPostComponent }
+      { path: 'add-new-post', component: AddNewPostComponent },
       { path: 'post/:id', component: PostDetailsComponent },
       { path: 'comments', component: CommentsComponent, canActivate: [AuthGuard]  },
       { path: 'roles', component: RolesComponent, canActivate: [AuthGuard] },
     ])
   ],
-  providers: [AuthGuard,
-    { provide: 'SnotifyToastConfig', useValue: ToastDefaults },
-    SnotifyService],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
