@@ -3,6 +3,8 @@ import { Posts } from '../models/posts';
 import { PostService } from '../services/post.service';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { EventEmitter } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { SnotifyService } from 'ng-snotify';
 @Component({
   selector: 'app-add-post',
   templateUrl: './add-post.component.html',
@@ -12,7 +14,7 @@ export class AddPostComponent implements OnInit {
   newPost: Posts;
   postFG: FormGroup;
   public fileToUpload: any;
-  constructor(private _postService: PostService, private fb: FormBuilder) {
+  constructor(private _postService: PostService, private fb: FormBuilder, private auth: AuthService, private snotifyService: SnotifyService) {
 
     this.newPost = new Posts();
   }
@@ -44,31 +46,37 @@ export class AddPostComponent implements OnInit {
   }
  
   addNewPost(postForm: any) {
+    this.auth.getAuthority().subscribe(res => {
+ 
+      if (res == 2||res==1) {
 
-    this.postFG.markAllAsTouched();
-    if (this.postFG.valid) {
-
-
-      this.newPost.title = postForm.controls.formTitle.value;
-    //  this.newPost.thumbnail = this.fileToUpload;
-      //this.newPost.thumbnailFileName = this.fileToUpload.name;
-      this.newPost.body = postForm.controls.formbody.value;
-      this.newPost.tags = postForm.controls.formTags.value;
+        this.postFG.markAllAsTouched();
+        if (this.postFG.valid) {
 
 
-      console.log(this.newPost);
-      this._postService.addPost(this.newPost).subscribe(
-        (res) => {
-          if (res == 1) {
-            alert("Post dodany");
-            this.addPostEvent.emit("ok");
-          }
-          else
-            alert("Błąd podczas dodawania postu");
+          this.newPost.title = postForm.controls.formTitle.value;
+          this.newPost.body = postForm.controls.formbody.value;
+          this.newPost.tags = postForm.controls.formTags.value;
+
+
+          console.log(this.newPost);
+          this._postService.addPost(this.newPost).subscribe(
+            (res) => {
+              if (res == 1) {
+                //this.snotifyService.success("Logowanie udane!", "Login")
+                this.addPostEvent.emit("ok");
+              }
+              else
+                alert("Błąd podczas dodawania postu");
+            }
+          );
         }
-      );
-    }
-    else
-      alert("Uzupełnijpoprawnie")
+        else
+          alert("Uzupełnij poprawnie formularz")
+
+      }
+
+    });
+
   }
 }

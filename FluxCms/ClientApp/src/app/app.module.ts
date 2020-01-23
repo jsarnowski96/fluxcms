@@ -25,6 +25,8 @@ import { AddNewEntryComponent } from './add-new-entry/add-new-entry.component';
 import { AddNewPageComponent } from './add-new-page/add-new-page.component';
 import { AddNewUserComponent } from './add-new-user/add-new-user.component';
 import { AddNewRoleComponent } from './add-new-role/add-new-role.component';
+import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import { PostDetailsComponent } from './post-details/post-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +46,9 @@ import { AddNewRoleComponent } from './add-new-role/add-new-role.component';
     AddNewPageComponent,
     AddNewUserComponent,
     AddNewRoleComponent,
-    AddPostComponent
+    AddPostComponent,
+    AddPostComponent,
+    PostDetailsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -67,12 +71,15 @@ import { AddNewRoleComponent } from './add-new-role/add-new-role.component';
       { path: 'pages', component: PagesComponent },
       { path: 'users', component: UsersComponent },
       { path: 'contact', component: ContactComponent },
-      { path: 'comments', component: CommentsComponent },
-      { path: 'roles', component: RolesComponent },
-      { path: 'entries', component: EntriesComponent}
+      { path: 'post/:id', component: PostDetailsComponent },
+      { path: 'comments', component: CommentsComponent, canActivate: [AuthGuard]  },
+      { path: 'roles', component: RolesComponent, canActivate: [AuthGuard] },
+      { path: 'entries', component: EntriesComponent, canActivate: [AuthGuard] }
     ])
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard,
+    { provide: 'SnotifyToastConfig', useValue: ToastDefaults },
+    SnotifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

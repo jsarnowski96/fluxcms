@@ -7,7 +7,7 @@ namespace FluxCms.Models
     {
         public int Id { get; set; }
         public string Body { get; set; }
-        public byte IsMarkedAsSpam { get; set; }
+        public bool IsMarkedAsSpam { get; set; }
         public string Uri { get; set; }
         public DateTime CreatedAt { get; set; }
         public int CreatedBy { get; set; }
