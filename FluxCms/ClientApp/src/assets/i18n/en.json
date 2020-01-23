@@ -84,12 +84,12 @@
     },
     "contact": "Contact",
     "addPost": {
-      "title": "Dodawanie postu",
-      "message": "Treść posta",
-      "postSubject": "Tytuł posta",
-      "tags": "Tagi",
-      "publish": "Opublikuj post",
-      "clear": "Wyczyść"
+      "title": "Add new post",
+      "message": "Post body",
+      "postSubject": "Post title",
+      "tags": "Tags",
+      "publish": "Publish post",
+      "clear": "Clear"
     }
   }
 }
