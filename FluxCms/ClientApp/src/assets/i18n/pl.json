@@ -7,20 +7,23 @@
     "name": "Imię",
     "lastname": "Nazwisko",
     "register": "Zarejestruj się",
-    "title":  "Panel rejestracji użytkownika"
+    "title": "Panel rejestracji użytkownika"
   },
+
   "login": {
     "login": "Zaloguj",
     "password": "Hasło",
     "register": "Zarejestruj się",
     "username": "Login",
-    "email":  "Adres e-mail",
+    "email": "Adres e-mail",
     "title": "Panel logowania"
   },
+
   "dashboard": {
     "welcomeMessage": "Witaj ponownie, ",
-      "actions": "Akcje"
+    "actions": "Akcje"
   },
+
   "nav": {
     "mainPage": "Strona główna",
     "entries": {
@@ -33,9 +36,10 @@
         "title": "Tytuł",
         "author": "Autor",
         "creationDate": "Data utworzenia",
-        "editDate":  "Data modyfikacji"
+        "editDate": "Data modyfikacji"
       }
     },
+
     "pages": {
       "top": "Strony",
       "all": "Wszystkie strony",
@@ -47,6 +51,7 @@
         "editDate": "Data modyfikacji"
       }
     },
+
     "comments": {
       "top": "Komentarze",
       "overview": {
@@ -56,6 +61,7 @@
         "editDate": "Data modyfikacji"
       }
     },
+
     "settings": {
       "roles": {
         "top": "Role",
@@ -67,7 +73,9 @@
           "creationDate": "Data utworzenia"
         }
       },
+
       "top": "Ustawienia",
+
       "users": {
         "top": "Użytkownicy",
         "all": "Wszyscy użytkownicy",
@@ -80,7 +88,9 @@
         }
       }
     },
+
     "contact": "Kontakt",
+
     "addPost": {
       "title": "Dodawanie postu",
       "message": "Treść posta",

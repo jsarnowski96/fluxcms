@@ -12,46 +12,49 @@
   </div>
 </nav>
 <div class="wrapper">
-  <!-- Sidebar -->
   <nav id="sidebar">
     <div class="sidebar-header">
       <h3 class="text-center">Flux Cms</h3>
       <h4 class="text-center">Dashboard</h4>
     </div>
-    <button (click)="useLanguage('pl')" class="btn btn-outline-secondary" type="button">PL</button>&nbsp;
-    <button (click)="useLanguage('en')" class="btn btn-outline-primary" type="button">EN</button>
+    <div class="conrainer justify-content-center">
+      <button (click)="useLanguage('pl')" class="btn btn-outline-secondary" type="button">PL</button>&nbsp;
+      <button (click)="useLanguage('en')" class="btn btn-outline-primary" type="button">EN</button>&nbsp;
+      <button (click)="useLanguage('ru')" class="btn btn-outline-secondary" type="button">RU</button>&nbsp;
+      <button (click)="useLanguage('ua')" class="btn btn-outline-primary" type="button">UA</button>
+    </div>
     <ul class="list-unstyled components">
       <li class="nav-item active" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
         <a class="nav-link" [routerLink]="['/dashboard']">{{'nav.mainPage'|translate}}</a>
       </li>
-      <!--<li *ngIf="authority>0">
-        <a href="#entrySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.entries.top'|translate}}</a>
-        <ul class="collapse list-unstyled" id="entrySubmenu">
-          <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
-            <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['posts']">{{'nav.entries.all'|translate}}</a>
-          </li>
-          <li>
-            <a href="add-new-post">{{'nav.entries.add'|translate}}</a>
-          </li>
-          <li>
-            <a href="#">{{'nav.entries.categories'|translate}}</a>
-          </li>
-          <li>
-            <a href="#">{{'nav.entries.tags'|translate}}</a>
-          </li>
-        </ul>
-      </li>-->
-      <!--<li *ngIf="authority==2">
-        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.pages.top'|translate}}</a>
-        <ul class="collapse list-unstyled" id="pageSubmenu">
-          <li>
-            <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/pages']">{{'nav.pages.all'|translate}}</a>
-          </li>
-          <li>
-            <a href="#">{{'nav.pages.add'|translate}}</a>
-          </li>
-        </ul>
-      </li>-->
+      <li *ngIf="authority>0">
+      <a href="#entrySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.entries.top'|translate}}</a>
+      <ul class="collapse list-unstyled" id="entrySubmenu">
+        <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+          <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['posts']">{{'nav.entries.all'|translate}}</a>
+        </li>
+        <li>
+          <a href="add-new-post">{{'nav.entries.add'|translate}}</a>
+        </li>
+        <li>
+          <a href="#">{{'nav.entries.categories'|translate}}</a>
+        </li>
+        <li>
+          <a href="#">{{'nav.entries.tags'|translate}}</a>
+        </li>
+      </ul>
+    </li>
+      <li *ngIf="authority==2">
+      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.pages.top'|translate}}</a>
+      <ul class="collapse list-unstyled" id="pageSubmenu">
+        <li>
+          <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/pages']">{{'nav.pages.all'|translate}}</a>
+        </li>
+        <li>
+          <a href="#">{{'nav.pages.add'|translate}}</a>
+        </li>
+      </ul>
+    </li>
       <li *ngIf="authority>0">
         <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/comments']">{{'nav.comments.top'|translate}}</a>
       </li>
@@ -65,13 +68,13 @@
               <li><a href="#">{{'nav.settings.users.add'|translate}}</a></li>
             </ul>
           </li>
-          <!--<li>
-            <a href="#rolesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.settings.roles.top'|translate}}</a>
-            <ul class="collapse list-unstyled" id="rolesSubmenu">
-              <li><a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/roles']">{{'nav.settings.roles.all'|translate}}</a></li>
-              <li><a href="#">{{'nav.settings.roles.add'|translate}}</a></li>
-            </ul>
-          </li>-->
+          <li>
+          <a href="#rolesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.settings.roles.top'|translate}}</a>
+          <ul class="collapse list-unstyled" id="rolesSubmenu">
+            <li><a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/roles']">{{'nav.settings.roles.all'|translate}}</a></li>
+            <li><a href="#">{{'nav.settings.roles.add'|translate}}</a></li>
+          </ul>
+        </li>
         </ul>
       </li>
       <li>
@@ -84,6 +87,5 @@
         <a class="nav-link pointer" [routerLinkActive]="['link-active']" [routerLink]="['/login']">{{'nav.login'|translate}}</a>
       </li>
     </ul>
-    <!-- Footer -->
   </nav>
 </div>
