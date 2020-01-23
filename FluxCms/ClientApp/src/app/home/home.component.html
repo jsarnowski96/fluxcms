@@ -1,9 +1,11 @@
 <app-standard-user-navbar></app-standard-user-navbar>
-<div class="container">
-  Stronka dla osoby niezalogowanej
-</div>
 <div *ngFor="let post of postList">
-  <h3 style="cursor:pointer;" routerLink="/post/{{post.id}}">{{post.title}}</h3>
-  <p>{{post.body}}</p>
-  <label>{{post.tags}}</label>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h3 style="cursor:pointer;" routerLink="/post/{{post.id}}" class="display-6">{{post.title}}</h3>
+      <p class="lead">{{post.body}}</p>
+      <hr class="my-4" />
+      <p class="lead">{{post.tags}}</p>
+    </div>
+  </div>
 </div>
