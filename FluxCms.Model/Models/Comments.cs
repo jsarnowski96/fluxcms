@@ -10,7 +10,7 @@ namespace FluxCms.Models
         public bool IsMarkedAsSpam { get; set; }
         public string Uri { get; set; }
         public DateTime CreatedAt { get; set; }
-        public int CreatedBy { get; set; }
+        public string CreatedBy { get; set; }
         public int Pageid { get; set; }
     }
 }

@@ -16,6 +16,7 @@ namespace FluxCms.Services
         Task<List<Posts>> GetPostList();
         Task<bool> BanComment(Comments commentForBan);
         Task<List<Comments>> GetCommentsListForPost(int postId);
+        Task<List<Comments>> GetCommentsList();
         Task<Posts> GetPostById(int id);
         Task<Comments> GetCommentById(int id);
         Task<bool> AddNewPost(Posts newPost);
@@ -35,10 +36,20 @@ namespace FluxCms.Services
 
             var cList = new List<Comments>();
 
-            cList = await _db.Comments.Where(p=>p.Pageid==postId).OrderBy(d=>d.CreatedAt).ToListAsync();
+            cList = await _db.Comments.Where(p => p.Pageid == postId && p.IsMarkedAsSpam == false).OrderBy(d=>d.CreatedAt).ToListAsync();
 
             return cList;
-        }        public async Task<List<Posts>> GetPostList()
+        }      
+        public async Task<List<Comments>> GetCommentsList()
+        {
+
+            var cList = new List<Comments>();
+
+            cList = await _db.Comments.OrderBy(d=>d.CreatedAt).ToListAsync();
+
+            return cList;
+        }        
+        public async Task<List<Posts>> GetPostList()
         {
 
             var postsList = new List<Posts>();

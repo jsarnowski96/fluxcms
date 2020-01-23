@@ -1,6 +1,26 @@
 {{post.title}}
 
+  <form id="commentForm" #commentForm="ngForm" [formGroup]="commentFG">
+    <div class="form-group row">
+      <label for="text" class="col-4 col-form-label">Nick</label>
+      <div class="col-8">
+        <input type="text" formControlName="nick" #title id="nick" name="nick" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="text" class="col-4 col-form-label">Komenarz</label>
+      <div class="col-8">
+        <textarea formControlName="comment" #tags id="comment" name="comment" ></textarea>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="offset-4 col-8">
+        <button class="button" (click)="addComment(commentForm.form)">Dodaj komentarz</button>
+      </div>
+    </div>
+    <br />
+  </form>
+  <div *ngFor="let c of comments">
+    <p>  {{c.body}} <button *ngIf="authority>0" class="btn-primary btn" id="{{c.id}}" (click)="banComment($event)"> Ukryj komentarz</button></p>
 
-<div *ngFor="let c of comments">
-  {{c.body}} <button *ngIf="authority>0" class="btn-primary btn" id="{{c.id}}" (click)="banComment($event)" > </button>
-</div>
+  </div>

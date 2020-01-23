@@ -26,7 +26,8 @@ namespace FluxCms.Model
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server = localhost; Database = FluxCms; Trusted_Connection = True; ");
+                //optionsBuilder.UseSqlServer("Server = localhost; Database = FluxCms; Trusted_Connection = True; ");
+                optionsBuilder.UseSqlServer("Server=tcp:darreur.database.windows.net,1433;Initial Catalog=FluxCms;Persist Security Info=False;User ID=fluxcms;Password=zaq1@WSX;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 

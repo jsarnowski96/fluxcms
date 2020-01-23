@@ -33,16 +33,12 @@ namespace FluxCms.Controllers
 
             var result = await _postService.AddNewComment(newcomment);
             return Ok(1);
-        }            
-        [HttpPost("[action]")]
-        [Route("AddPost")]
-        public async Task<IActionResult> BanComment([FromBody]int commentId)
+        }
+        [HttpGet]
+        [Route("[action]/{id:int}")]
+        public async Task<IActionResult> BanComment(int commentId)
         {
            Comments commentForBan = await _postService.GetCommentById(commentId);
-
-
-
-
             var res = await _postService.BanComment(commentForBan);
             return Ok(1);
         }        
@@ -84,6 +80,14 @@ namespace FluxCms.Controllers
         {
             List<Comments> lc = new List<Comments>();
             lc = await _postService.GetCommentsListForPost(postId);
+            return Ok(lc);
+        }        
+        [HttpGet]
+        [Route("GetCommentsForPost")]
+        public async Task<IActionResult> GetCommentsList()
+        {
+            List<Comments> lc = new List<Comments>();
+            lc = await _postService.GetCommentsList();
             return Ok(lc);
         }
         [HttpGet]

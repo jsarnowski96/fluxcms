@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FluxCms.Model.Migrations
 {
     [DbContext(typeof(FluxCmsContext))]
-    [Migration("20200117191210_Baza")]
-    partial class Baza
+    [Migration("20200123193308_createdByComment")]
+    partial class createdByComment
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -73,11 +73,11 @@ namespace FluxCms.Model.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte>("IsMarkedAsSpam")
-                        .HasColumnType("tinyint");
+                    b.Property<bool>("IsMarkedAsSpam")
+                        .HasColumnType("bit");
 
                     b.Property<int>("Pageid")
                         .HasColumnType("int");

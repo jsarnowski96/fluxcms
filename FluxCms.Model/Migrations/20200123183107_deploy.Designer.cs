@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FluxCms.Model.Migrations
 {
     [DbContext(typeof(FluxCmsContext))]
-    [Migration("20200122214459_spam")]
-    partial class spam
+    [Migration("20200123183107_deploy")]
+    partial class deploy
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

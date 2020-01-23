@@ -5,7 +5,7 @@ export class Comment {
   isMarkedAsSpam: boolean;
   uri: string;
   createdAt: Date;
-  createdBy: number;
+  createdBy: string;
   pageId: number;
 
 }

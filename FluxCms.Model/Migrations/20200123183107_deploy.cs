@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FluxCms.Model.Migrations
 {
-    public partial class Baza : Migration
+    public partial class deploy : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,7 +14,7 @@ namespace FluxCms.Model.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Body = table.Column<string>(nullable: true),
-                    IsMarkedAsSpam = table.Column<byte>(nullable: false),
+                    IsMarkedAsSpam = table.Column<bool>(nullable: false),
                     Uri = table.Column<string>(nullable: true),
                     CreatedAt = table.Column<DateTime>(nullable: false),
                     CreatedBy = table.Column<int>(nullable: false),
