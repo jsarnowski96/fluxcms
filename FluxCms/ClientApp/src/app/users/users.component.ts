@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
 
-  constructor() { }
+  constructor(public auth: AuthService, public router: Router) { }
 
   ngOnInit() {
   }

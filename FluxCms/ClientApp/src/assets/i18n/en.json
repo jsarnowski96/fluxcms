@@ -35,7 +35,7 @@
       "overview": {
         "title": "Title",
         "author": "Author",
-        "body" "Body",
+        "body": "Body",
         "creationDate": "Date of creation",
         "editDate": "Date of modification"
       }
@@ -53,6 +53,8 @@
     },
     "comments": {
       "top": "Comments",
+      "comment": "Comment",
+      "add": "Add comment",
       "overview": {
         "title": "Title",
         "author": "Author",
