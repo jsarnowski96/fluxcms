@@ -71,6 +71,7 @@ export class PostDetailsComponent implements OnInit {
 
           this.newComment.createdBy = commentForm.controls.nick.value;
           this.newComment.body = commentForm.controls.comment.value;
+          this.newComment.pageId = this.post.id;
 
 
           this._ps.addComment(this.newComment).subscribe(

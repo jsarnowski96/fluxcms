@@ -2,7 +2,7 @@
 <div *ngFor="let post of postList">
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h3 class="display-6">{{post.title}}</h3>
+      <h3 style="cursor:pointer;" routerLink="/post/{{post.id}}" class="display-6">{{post.title}}</h3>
       <p class="lead">{{post.body}}</p>
       <hr class="my-4" />
       <p class="lead">{{post.tags}}</p>

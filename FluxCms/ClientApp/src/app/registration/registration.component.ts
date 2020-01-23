@@ -51,7 +51,6 @@ export class RegistrationComponent implements OnInit {
 
         this.user.authority = 1;
 
-        console.log(this.user);
         this.registrationService.register(this.user).subscribe(
           (res) => {
             if (res == 1) {
