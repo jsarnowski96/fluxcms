@@ -66,6 +66,9 @@ a, a:hover, a:focus {
   color: #fff;
   transition: all 0.3s;
 }
+.pointer{
+    cursor:pointer;
+}
   #sidebar>button {
       text-align:center;
       margin-left: 10%;

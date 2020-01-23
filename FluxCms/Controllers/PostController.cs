@@ -19,6 +19,33 @@ namespace FluxCms.Controllers
         {
             _postService = postService;
         }
+        [HttpPost("[action]")]
+        [Route("AddPost")]
+        public async Task<IActionResult> AddComment([FromBody]Comments comment)
+        {
+           Comments newcomment = new Comments();
+
+            newcomment.Body = comment.Body;
+            newcomment.Pageid = comment.Pageid;
+            newcomment.CreatedBy = comment.CreatedBy;
+            newcomment.CreatedAt = newcomment.CreatedAt;
+            newcomment.IsMarkedAsSpam = false;
+
+            var result = await _postService.AddNewComment(newcomment);
+            return Ok(1);
+        }            
+        [HttpPost("[action]")]
+        [Route("AddPost")]
+        public async Task<IActionResult> BanComment([FromBody]int commentId)
+        {
+           Comments commentForBan = await _postService.GetCommentById(commentId);
+
+
+
+
+            var res = await _postService.BanComment(commentForBan);
+            return Ok(1);
+        }        
         [HttpPost("[action]"), DisableRequestSizeLimit]
         [Route("AddPost")]
         public async Task<IActionResult> AddPost([FromBody]PostsVM post)
@@ -49,6 +76,22 @@ namespace FluxCms.Controllers
         {
             List<Posts> lp = new List<Posts>();
             lp = await _postService.GetPostList();
+            return Ok(lp);
+        }        
+        [HttpGet]
+        [Route("GetCommentsForPost/{id:int}")]
+        public async Task<IActionResult> GetCommentsForPost(int postId)
+        {
+            List<Comments> lc = new List<Comments>();
+            lc = await _postService.GetCommentsListForPost(postId);
+            return Ok(lc);
+        }
+        [HttpGet]
+        [Route("[action]/{id:int}")]
+        public async Task<IActionResult> GetPost(int id)
+        {
+            Posts lp = new Posts();
+            lp = await _postService.GetPostById(id);
             return Ok(lp);
         }
     }
