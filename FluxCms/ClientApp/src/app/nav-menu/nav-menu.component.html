@@ -28,10 +28,10 @@
         <a href="#entrySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.entries.top'|translate}}</a>
         <ul class="collapse list-unstyled" id="entrySubmenu">
           <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
-            <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/entries']">{{'nav.entries.all'|translate}}</a>
+            <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['posts']">{{'nav.entries.all'|translate}}</a>
           </li>
           <li>
-            <a href="#">{{'nav.entries.add'|translate}}</a>
+            <a href="add-new-post">{{'nav.entries.add'|translate}}</a>
           </li>
           <li>
             <a href="#">{{'nav.entries.categories'|translate}}</a>

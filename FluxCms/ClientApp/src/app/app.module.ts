@@ -14,17 +14,18 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService as AuthGuard } from './helpers/auth.guard';
-import { AddPostComponent } from './add-post/add-post.component';
-import { EntriesComponent } from './entries/entries.component';
+import { AddNewPostComponent } from './add-new-post/add-new-post.component';
 import { UsersComponent } from './users/users.component';
 import { RolesComponent } from './roles/roles.component';
 import { ContactComponent } from './contact/contact.component';
 import { PagesComponent } from './pages/pages.component';
 import { CommentsComponent } from './comments/comments.component';
-import { AddNewEntryComponent } from './add-new-entry/add-new-entry.component';
 import { AddNewPageComponent } from './add-new-page/add-new-page.component';
 import { AddNewUserComponent } from './add-new-user/add-new-user.component';
 import { AddNewRoleComponent } from './add-new-role/add-new-role.component';
+import { PostsComponent } from './posts/posts.component';
+import { StandardUserNavbarComponent } from './standard-user-navbar/standard-user-navbar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,17 +35,17 @@ import { AddNewRoleComponent } from './add-new-role/add-new-role.component';
     RegistrationComponent,
     LoginComponent,
     DashboardComponent,
-    EntriesComponent,
     UsersComponent,
     RolesComponent,
     ContactComponent,
     PagesComponent,
     CommentsComponent,
-    AddNewEntryComponent,
     AddNewPageComponent,
     AddNewUserComponent,
     AddNewRoleComponent,
-    AddPostComponent
+    AddNewPostComponent,
+    PostsComponent,
+    StandardUserNavbarComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -69,7 +70,8 @@ import { AddNewRoleComponent } from './add-new-role/add-new-role.component';
       { path: 'contact', component: ContactComponent },
       { path: 'comments', component: CommentsComponent },
       { path: 'roles', component: RolesComponent },
-      { path: 'entries', component: EntriesComponent}
+      { path: 'posts', component: PostsComponent },
+      { path: 'add-new-post', component: AddNewPostComponent }
     ])
   ],
   providers: [AuthGuard],

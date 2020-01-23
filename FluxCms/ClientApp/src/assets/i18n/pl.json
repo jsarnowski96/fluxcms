@@ -2,7 +2,7 @@
   "registration": {
     "username": "Login",
     "password": "Hasło",
-    "email": "Email",
+    "email": "Adres e-mail",
     "phone": "Numer telefonu",
     "name": "Imię",
     "lastname": "Nazwisko",
@@ -12,7 +12,9 @@
     "login": "Zaloguj",
     "password": "Hasło",
     "register": "Zarejestruj się",
-    "username": "Login"
+    "username": "Login",
+    "email":  "Adres e-mail",
+    "title": "Panel logowania"
   },
   "dashboard": {
     "welcomeMessage": "Witaj ponownie, ",
@@ -77,6 +79,14 @@
         }
       }
     },
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "addPost": {
+      "title": "Dodawanie postu",
+      "message": "Treść posta",
+      "postSubject": "Tytuł posta",
+      "tags": "Tagi",
+      "publish": "Opublikuj post",
+      "clear": "Wyczyść"
+    }
   }
 }
