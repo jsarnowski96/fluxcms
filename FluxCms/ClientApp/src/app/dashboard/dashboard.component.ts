@@ -11,6 +11,7 @@ import { Posts } from '../models/posts';
 })
 export class DashboardComponent implements OnInit {
   myAuthority: number;
+  username: string;
   postList: Posts[];
 
   addPost: boolean = false;
@@ -29,7 +30,9 @@ export class DashboardComponent implements OnInit {
       }
 
     });
-
+    this.auth.getUserName().subscribe(res => {
+      this.username = res
+    });
   }
   reloadPosts() {
     this._postService.getPostsList().subscribe(res => {

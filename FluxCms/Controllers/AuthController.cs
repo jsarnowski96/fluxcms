@@ -66,6 +66,19 @@ namespace FluxCms.Controllers
                 result = 0;
 
             return Ok(result);
+        }      
+        [HttpGet("[action]")]
+        [Route("GetUsername")]
+        public async Task<IActionResult> GetUsername()
+        {
+
+            string result;
+            if (HttpContext.Session.GetInt32("username") != null)
+                result = HttpContext.Session.GetString("username");
+            else
+                result = "";
+
+            return Ok(result);
         }
         [HttpPost("[action]")]
         [Route("Logout")]
