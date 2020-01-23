@@ -4,7 +4,6 @@ import { PostService } from '../services/post.service';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { EventEmitter } from '@angular/core';
 import { AuthService } from '../services/auth.service';
-import { SnotifyService } from 'ng-snotify';
 @Component({
   selector: 'app-add-post',
   templateUrl: './add-new-post.component.html',
