@@ -23,14 +23,9 @@ import { CommentsComponent } from './comments/comments.component';
 import { AddNewPageComponent } from './add-new-page/add-new-page.component';
 import { AddNewUserComponent } from './add-new-user/add-new-user.component';
 import { AddNewRoleComponent } from './add-new-role/add-new-role.component';
-<<<<<<< HEAD
 import { PostsComponent } from './posts/posts.component';
 import { StandardUserNavbarComponent } from './standard-user-navbar/standard-user-navbar.component';
-
-=======
-import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 import { PostDetailsComponent } from './post-details/post-details.component';
->>>>>>> f921d5edb161eedc237e9b560f41e9bb45d13689
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,15 +43,10 @@ import { PostDetailsComponent } from './post-details/post-details.component';
     AddNewPageComponent,
     AddNewUserComponent,
     AddNewRoleComponent,
-<<<<<<< HEAD
     AddNewPostComponent,
     PostsComponent,
-    StandardUserNavbarComponent
-=======
-    AddPostComponent,
-    AddPostComponent,
+    StandardUserNavbarComponent,
     PostDetailsComponent
->>>>>>> f921d5edb161eedc237e9b560f41e9bb45d13689
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -79,17 +69,13 @@ import { PostDetailsComponent } from './post-details/post-details.component';
       { path: 'pages', component: PagesComponent },
       { path: 'users', component: UsersComponent },
       { path: 'contact', component: ContactComponent },
-<<<<<<< HEAD
       { path: 'comments', component: CommentsComponent },
       { path: 'roles', component: RolesComponent },
       { path: 'posts', component: PostsComponent },
       { path: 'add-new-post', component: AddNewPostComponent }
-=======
       { path: 'post/:id', component: PostDetailsComponent },
       { path: 'comments', component: CommentsComponent, canActivate: [AuthGuard]  },
       { path: 'roles', component: RolesComponent, canActivate: [AuthGuard] },
-      { path: 'entries', component: EntriesComponent, canActivate: [AuthGuard] }
->>>>>>> f921d5edb161eedc237e9b560f41e9bb45d13689
     ])
   ],
   providers: [AuthGuard,
