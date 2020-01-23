@@ -1,38 +1,43 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<app-standard-user-navbar></app-standard-user-navbar>
+<br />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 <div class="container">
-  <div class="card card-login mx-auto text-center bg-dark">
-    <div class="card-body">
-      <form id="registerForm" [formGroup]="regisFG" #registerForm="ngForm" action="" method="post">
-        <div class="input-group form-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fas fa-user"></i></span>
-          </div>
-          <input type="text" formControlName="username" #username id="username" name="username" class="form-control" placeholder="{{'login.username'|translate}}" /><br />
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">{{'registration.title'|translate}}</div>
+        <div class="card-body">
+          <form id="registerForm" [formGroup]="regisFG" #registerForm="ngForm" action="" method="post">
+            <div class="form-group">
+              <input type="text" formControlName="username" #username id="username" name="username" class="form-control" placeholder="{{'login.username'|translate}}" />
+            </div>
+            <div class="form-group">
+              <input type="password" formControlName="password" class="form-control" #password id="password" name="password" placeholder="{{'login.password'|translate}}"/>
+            </div>
+            <div class="form-group">
+              <input type="text" formControlName="email" class="form-control" #email id="email" name="email" placeholder="{{'registration.email'|translate}}" />
+            </div>
+            <div class="form-group">
+              <input type="text" formControlName="name" class="form-control" #firstname id="firstname" name="firstname" placeholder="{{'registration.name'|translate}}" />
+            </div>
+            <div class="form-group">
+              <input type="text" formControlName="lastname" class="form-control" #lastname id="lastname" name="lastname" placeholder="{{'registration.lastname'|translate}}" />
+            </div>
+            <div class="form-group">
+              <input type="text" formControlName="phoneNumber" class="form-control" #phone id="phone" name="phone" placeholder="{{'registration.phone'|translate}}" />
+            </div>
+            <div class="form-group justify-content-center">
+              <div class="col-md-8 offset-md-4">
+                <button (click)="addUser(registerForm.form)" class="btn btn-success login_btn" style="margin-right: 0.5vh;">{{'registration.register'|translate}}</button>
+                <button type="button" class="btn btn-primary" onclick="$('#registerForm')[0].reset();">{{'nav.addPost.clear'|translate}}</button>
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="input-group form-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fas fa-key"></i></span>
-          </div>
-          <input type="password" formControlName="password" class="form-control" #password id="password" name="password" placeholder="{{'login.password'|translate}}" /><br />
-        </div>
-        <div class="input-group form-group">
-          <input type="text" formControlName="email" class="form-control" #email id="email" name="email" placeholder="{{'registration.email'|translate}}"/><br />
-        </div>
-        <div class="input-group form-group">
-          <input type="text" formControlName="name" class="form-control" #firstname id="firstname" name="firstname" placeholder="{{'registration.name'|translate}}"/><br />
-        </div>
-        <div class="input-group form-group">
-          <input type="text" formControlName="lastname"  class="form-control" #lastname id="lastname" name="lastname" placeholder="{{'registration.lastname'|translate}}" /><br />
-        </div>
-        <div class="input-group form-group">
-          <input type="text" formControlName="phoneNumber"  class="form-control" #phone id="phone" name="phone" placeholder="{{'registration.phone'|translate}}"/><br />
-        </div>
-        <div class="form-group">
-          <button (click)="addUser(registerForm.form)" class="btn btn-outline-danger float-right login_btn" style="margin-right: 0.5vh;">{{'registration.register'|translate}}</button>
-        </div>
-      </form>
+      </div>
     </div>
   </div>
 </div>
-

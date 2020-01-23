@@ -1,0 +1,26 @@
+<app-nav-menu></app-nav-menu>
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">{{'nav.addPost.title'|translate}}</div>
+      <div class="card-body">
+        <form id="postForm" #postForm="ngForm" [formGroup]="postFG">
+          <div class="form-group">
+            <label for="name">{{'nav.addPost.postSubject'|translate}}</label>
+            <input type="text" formControlName="formTitle" #title id="title" name="title" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="message">{{'nav.addPost.message'|translate}}</label>
+            <textarea formControlName="formbody" #body id="body" name="body" class="form-control" rows="5"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="text">{{'nav.addPost.tags'|translate}}</label>
+            <input type="text" formControlName="formTags" #tags id="tags" name="tags" class="form-control" />
+          </div>
+          <button (click)="addNewPost(postForm.form)" type="submit" class="btn btn-primary">{{'nav.addPost.publish'|translate}}</button>&nbsp;
+          <button type="button" class="btn btn-success" onclick="$('#postForm')[0].reset();">{{'nav.addPost.clear'|translate}}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

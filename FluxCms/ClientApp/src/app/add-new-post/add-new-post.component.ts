@@ -4,17 +4,16 @@ import { PostService } from '../services/post.service';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { EventEmitter } from '@angular/core';
 import { AuthService } from '../services/auth.service';
-import { SnotifyService } from 'ng-snotify';
 @Component({
   selector: 'app-add-post',
-  templateUrl: './add-post.component.html',
-  styleUrls: ['./add-post.component.css']
+  templateUrl: './add-new-post.component.html',
+  styleUrls: ['./add-new-post.component.css']
 })
-export class AddPostComponent implements OnInit {
+export class AddNewPostComponent implements OnInit {
   newPost: Posts;
   postFG: FormGroup;
   public fileToUpload: any;
-  constructor(private _postService: PostService, private fb: FormBuilder, private auth: AuthService, private snotifyService: SnotifyService) {
+  constructor(private _postService: PostService, private fb: FormBuilder, private auth: AuthService) {
 
     this.newPost = new Posts();
   }

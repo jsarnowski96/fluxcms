@@ -14,18 +14,17 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService as AuthGuard } from './helpers/auth.guard';
-import { AddPostComponent } from './add-post/add-post.component';
-import { EntriesComponent } from './entries/entries.component';
+import { AddNewPostComponent } from './add-new-post/add-new-post.component';
 import { UsersComponent } from './users/users.component';
 import { RolesComponent } from './roles/roles.component';
 import { ContactComponent } from './contact/contact.component';
 import { PagesComponent } from './pages/pages.component';
 import { CommentsComponent } from './comments/comments.component';
-import { AddNewEntryComponent } from './add-new-entry/add-new-entry.component';
 import { AddNewPageComponent } from './add-new-page/add-new-page.component';
 import { AddNewUserComponent } from './add-new-user/add-new-user.component';
 import { AddNewRoleComponent } from './add-new-role/add-new-role.component';
-import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import { PostsComponent } from './posts/posts.component';
+import { StandardUserNavbarComponent } from './standard-user-navbar/standard-user-navbar.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
 @NgModule({
   declarations: [
@@ -36,18 +35,17 @@ import { PostDetailsComponent } from './post-details/post-details.component';
     RegistrationComponent,
     LoginComponent,
     DashboardComponent,
-    EntriesComponent,
     UsersComponent,
     RolesComponent,
     ContactComponent,
     PagesComponent,
     CommentsComponent,
-    AddNewEntryComponent,
     AddNewPageComponent,
     AddNewUserComponent,
     AddNewRoleComponent,
-    AddPostComponent,
-    AddPostComponent,
+    AddNewPostComponent,
+    PostsComponent,
+    StandardUserNavbarComponent,
     PostDetailsComponent
   ],
   imports: [
@@ -71,15 +69,16 @@ import { PostDetailsComponent } from './post-details/post-details.component';
       { path: 'pages', component: PagesComponent },
       { path: 'users', component: UsersComponent },
       { path: 'contact', component: ContactComponent },
+      { path: 'comments', component: CommentsComponent },
+      { path: 'roles', component: RolesComponent },
+      { path: 'posts', component: PostsComponent },
+      { path: 'add-new-post', component: AddNewPostComponent },
       { path: 'post/:id', component: PostDetailsComponent },
       { path: 'comments', component: CommentsComponent, canActivate: [AuthGuard]  },
       { path: 'roles', component: RolesComponent, canActivate: [AuthGuard] },
-      { path: 'entries', component: EntriesComponent, canActivate: [AuthGuard] }
     ])
   ],
-  providers: [AuthGuard,
-    { provide: 'SnotifyToastConfig', useValue: ToastDefaults },
-    SnotifyService],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

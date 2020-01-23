@@ -6,14 +6,16 @@
     "phone": "Phone number",
     "name": "Name",
     "lastname": "Last name",
-    "register": "Register now"
+    "register": "Register now",
+    "title": "User registration form"
   },
 
   "login": {
     "login": "Login",
     "password": "Password",
     "register": "Register",
-    "username": "Username"
+    "username": "Username",
+    "title": "Login panel"
   },
 
   "dashboard": {
@@ -23,6 +25,7 @@
 
   "nav": {
     "mainPage": "Main page",
+    "logout":  "Logout",
     "entries": {
       "top": "Entries",
       "all": "All entries",
@@ -80,6 +83,14 @@
         }
       }
     },
-    "contact": "Contact"
+    "contact": "Contact",
+    "addPost": {
+      "title": "Add new post",
+      "message": "Post body",
+      "postSubject": "Post title",
+      "tags": "Tags",
+      "publish": "Publish post",
+      "clear": "Clear"
+    }
   }
 }
