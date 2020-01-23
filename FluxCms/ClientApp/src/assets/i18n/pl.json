@@ -6,7 +6,8 @@
     "phone": "Numer telefonu",
     "name": "Imię",
     "lastname": "Nazwisko",
-    "register": "Zarejestruj się"
+    "register": "Zarejestruj się",
+    "title":  "Panel rejestracji użytkownika"
   },
   "login": {
     "login": "Zaloguj",

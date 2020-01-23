@@ -3,7 +3,6 @@ import { AuthService } from '../services/auth.service';
 import { Router, CanActivate } from '@angular/router';
 import { PostService } from '../services/post.service';
 import { Posts } from '../models/posts';
-import { SnotifyService } from 'ng-snotify';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,7 +14,7 @@ export class DashboardComponent implements OnInit {
   postList: Posts[];
 
   addPost: boolean = false;
-  constructor(public auth: AuthService, public router: Router, private _postService: PostService, private snotifyService: SnotifyService) {
+  constructor(public auth: AuthService, public router: Router, private _postService: PostService) {
     }
   ngOnInit() {
 

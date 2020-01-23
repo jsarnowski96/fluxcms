@@ -13,7 +13,7 @@ export class AddNewPostComponent implements OnInit {
   newPost: Posts;
   postFG: FormGroup;
   public fileToUpload: any;
-  constructor(private _postService: PostService, private fb: FormBuilder, private auth: AuthService, private snotifyService: SnotifyService) {
+  constructor(private _postService: PostService, private fb: FormBuilder, private auth: AuthService) {
 
     this.newPost = new Posts();
   }
