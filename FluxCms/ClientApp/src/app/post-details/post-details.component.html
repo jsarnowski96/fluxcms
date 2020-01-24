@@ -6,7 +6,7 @@
 <div class="row justify-content-center">
   <div class="col-md-8">
     <div class="card">
-      <div class="card-header">{{'nav.addPost.title'|translate}}</div>
+      <div class="card-header">{{'nav.comments.title'|translate}}</div>
       <div class="card-body">
         <form id="commentForm" #commentForm="ngForm" [formGroup]="commentFG">
           <div class="form-group">
@@ -22,12 +22,12 @@
           </div>
           <div class="form-group">
             <label for="message">{{'nav.addPost.message'|translate}}</label>
-            <textarea formControlName="comment" #tags id="comment" name="comment" rows="5" placeholder="{{'nav.comments.comment'|translate}}" required minlength="10"></textarea>
+            <textarea class="form-control" formControlName="comment" #tags id="comment" name="comment" rows="5" placeholder="{{'nav.comments.comment'|translate}}" required minlength="10"></textarea>
             <div *ngIf="comment.invalid && (comment.dirty || comment.touched)" class="alert alert-danger">
               <div *ngIf="comment.errors.required">
                 Komentarz nie może być pusty.
               </div>
-              <div *ngIf="firstname.errors.minlength">
+              <div *ngIf="comment.errors.minlength">
                 Komentarz musi mieć co najmniej 10 znaków.
               </div>
             </div>

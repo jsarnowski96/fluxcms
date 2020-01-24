@@ -54,6 +54,7 @@
     "comments": {
       "top": "Comments",
       "comment": "Comment",
+      "title": "Adding new comment",
       "add": "Add comment",
       "overview": {
         "title": "Title",

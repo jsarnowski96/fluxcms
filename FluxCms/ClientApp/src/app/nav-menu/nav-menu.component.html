@@ -1,20 +1,17 @@
 <nav class="d-flex justify-content-end navbar navbar-dark bg-dark text-light">
   <div class="btn-group dropleft">
     <button type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropleft
+      Username
     </button>
     <div class="dropdown-menu">
-      <span class="dropdown-item-text">Dropdown item text</span>
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a *ngIf="isLoggedIn" class="dropdown-item" href="#" [routerLinkActive]="['link-active']" (click)="logout()">{{'nav.logout'|translate}}></a>
     </div>
   </div>
 </nav>
 <div class="wrapper">
   <nav id="sidebar">
     <div class="sidebar-header">
-      <h3 class="text-center">Flux Cms</h3>
+      <h3 class="text-center"><a href="/">Flux Cms</a></h3>
       <h4 class="text-center">Dashboard</h4>
     </div>
     <div class="conrainer justify-content-center">
@@ -79,9 +76,6 @@
       </li>
       <li>
         <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/contact']">{{'nav.contact'|translate}}</a>
-      </li>
-      <li *ngIf="isLoggedIn">
-        <a class="nav-link pointer" [routerLinkActive]="['link-active']" (click)="logout()">{{'nav.logout'|translate}}</a>
       </li>
       <li *ngIf="!isLoggedIn">
         <a class="nav-link pointer" [routerLinkActive]="['link-active']" [routerLink]="['/login']">{{'nav.login'|translate}}</a>
