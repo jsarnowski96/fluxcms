@@ -31,6 +31,9 @@
         <li *ngIf="!isLoggedIn" class="nav-item">
           <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/login']">{{'login.login'|translate}}</a>
         </li>
+        <li *ngIf="!isLoggedIn" class="nav-item">
+          <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/register']">{{'login.register'|translate}}</a>
+        </li>
         <li *ngIf="isLoggedIn" class="nav-item">
           <a class="nav-link" style="cursor:pointer" [routerLinkActive]="['link-active']" (click)="logout()">{{'nav.logout'|translate}}</a>
         </li>

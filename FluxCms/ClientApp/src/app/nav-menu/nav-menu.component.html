@@ -18,7 +18,7 @@
       <button (click)="useLanguage('pl')" class="btn btn-outline-secondary" type="button">PL</button>&nbsp;
       <button (click)="useLanguage('en')" class="btn btn-outline-primary" type="button">EN</button>&nbsp;
       <button (click)="useLanguage('ru')" class="btn btn-outline-secondary" type="button">RU</button>&nbsp;
-      <button (click)="useLanguage('tr')" class="btn btn-outline-primary" type="button">TR</button>
+      <button (click)="useLanguage('tur')" class="btn btn-outline-primary" type="button">TR</button>
     </div>
     <ul class="list-unstyled components">
       <li class="nav-item active" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
@@ -78,7 +78,10 @@
         <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/contact']">{{'nav.contact'|translate}}</a>
       </li>
       <li *ngIf="!isLoggedIn">
-        <a class="nav-link pointer" [routerLinkActive]="['link-active']" [routerLink]="['/login']">{{'nav.login'|translate}}</a>
+        <a class="nav-link pointer" [routerLinkActive]="['link-active']" [routerLink]="['/login']">{{'login.login'|translate}}</a>
+      </li>
+      <li *ngIf="!isLoggedIn">
+        <a class="nav-link pointer" [routerLinkActive]="['link-active']" [routerLink]="['/register']">{{'login.register'|translate}}</a>
       </li>
     </ul>
   </nav>

@@ -54,7 +54,7 @@ namespace FluxCms.Services
 
             var postsList = new List<Posts>();
 
-            postsList = await _db.Posts.OrderBy(d=>d.CreatedAt).ToListAsync();
+            postsList = await _db.Posts.OrderByDescending(d=>d.CreatedAt).ToListAsync();
 
             return postsList;
         }

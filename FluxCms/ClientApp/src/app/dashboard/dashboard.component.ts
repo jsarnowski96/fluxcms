@@ -31,6 +31,7 @@ export class DashboardComponent implements OnInit {
 
     });
     this.auth.getUserName().subscribe(res => {
+      console.log(res)
       this.username = res
     });
   }

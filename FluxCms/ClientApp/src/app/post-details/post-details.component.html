@@ -1,6 +1,11 @@
 <app-nav-menu></app-nav-menu>
 <div class="card-header">{{post.title}}</div>
+<div class="">
+  <p>{{post.body}}</p>
+  <label><b>{{post.tags}}</b></label>
+</div>
 <div *ngFor="let c of comments">
+  <b>{{c.createdBy}}</b><br />
   <p>  {{c.body}} <button *ngIf="authority>0" class="btn-primary btn" id="{{c.id}}" (click)="banComment($event)"> Ukryj komentarz</button></p>
 </div>
 <div class="row justify-content-center">
