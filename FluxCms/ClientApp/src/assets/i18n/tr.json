@@ -7,17 +7,17 @@
     "name": "Ad",
     "lastname": "Soyadı",
     "register": "Kaydol"
-  }
+  },
   "login": {
     "login": "Login",
     "password": "Şifre",
     "register": "Register",
     "username": "kullanıcı adı"
-  }
+  },
   "dashboard": {
     "welcomeMessage": "Size iyi günler",
       "actions": "Hisse senetleri"
-  }
+  },
   "nav": {
     "mainPage": "Ana Sayfa",
     "entries": {
@@ -32,7 +32,7 @@
         "creationDate": "Oluşturuldu",
         "editDate": "Düzenlendi"
       }
-    }
+    },
     "pages": {
       "top": "Sayfalar",
       "all": "Tüm sayfalar",
@@ -43,7 +43,7 @@
         "creationDate": "Oluşturuldu",
         "editDate": "Düzenlendi"
       }
-    }
+    },
     "comments": {
       "top": "Yorumlar",
       "overview": {
@@ -52,7 +52,7 @@
         "creationDate": "Oluşturuldu",
         "editDate": "Düzenlendi"
       }
-    }
+    },
     "settings": {
       "roles": {
         "top": "Durum",
@@ -63,7 +63,7 @@
           "permissions": "İzinler",
           "creationDate": "Oluşturuldu"
         }
-      }
+      },
       "top": "Ayarlar",
       "users": {
         "top": "Kullanıcılar",
@@ -76,7 +76,7 @@
           "creationDate": "Oluşturma Tarihi"
         }
       }
-    }
+    },
     "contact": "Kişiler"
   }
 }
