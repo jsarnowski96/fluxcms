@@ -4,6 +4,7 @@ import { PostService } from '../services/post.service';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { EventEmitter } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-post',
   templateUrl: './add-new-post.component.html',
@@ -13,7 +14,7 @@ export class AddNewPostComponent implements OnInit {
   newPost: Posts;
   postFG: FormGroup;
   public fileToUpload: any;
-  constructor(private _postService: PostService, private fb: FormBuilder, private auth: AuthService) {
+  constructor(private _postService: PostService, private fb: FormBuilder, private auth: AuthService, private router: Router) {
 
     this.newPost = new Posts();
   }
@@ -64,6 +65,7 @@ export class AddNewPostComponent implements OnInit {
               if (res == 1) {
                 //this.snotifyService.success("Logowanie udane!", "Login")
                 this.addPostEvent.emit("ok");
+                this.router.navigate(['posts']);
               }
               else
                 alert("Błąd podczas dodawania postu");

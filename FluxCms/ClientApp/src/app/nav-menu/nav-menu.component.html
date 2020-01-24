@@ -78,7 +78,10 @@
         <a class="nav-link" [routerLinkActive]="['link-active']" [routerLink]="['/contact']">{{'nav.contact'|translate}}</a>
       </li>
       <li *ngIf="!isLoggedIn">
-        <a class="nav-link pointer" [routerLinkActive]="['link-active']" [routerLink]="['/login']">{{'nav.login'|translate}}</a>
+        <a class="nav-link pointer" [routerLinkActive]="['link-active']" [routerLink]="['/login']">{{'login.login'|translate}}</a>
+      </li>
+      <li *ngIf="!isLoggedIn">
+        <a class="nav-link pointer" [routerLinkActive]="['link-active']" [routerLink]="['/register']">{{'login.register'|translate}}</a>
       </li>
     </ul>
   </nav>

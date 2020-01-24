@@ -72,7 +72,7 @@ namespace FluxCms.Controllers
         public async Task<IActionResult> GetUsername()
         {
 
-            string result;
+            string result="";
             if (HttpContext.Session.GetInt32("username") != null)
                 result = HttpContext.Session.GetString("username");
             else

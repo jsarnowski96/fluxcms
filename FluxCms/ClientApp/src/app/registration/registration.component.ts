@@ -38,7 +38,7 @@ export class RegistrationComponent implements OnInit {
     addUser(registerForm:any) {
 
       this.regisFG.markAllAsTouched();
-
+      console.log(this.regisFG.valid)
 
       if (this.regisFG.valid) {
 
