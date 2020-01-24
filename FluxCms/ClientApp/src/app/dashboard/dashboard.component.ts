@@ -16,6 +16,7 @@ export class DashboardComponent implements OnInit {
 
   addPost: boolean = false;
   constructor(public auth: AuthService, public router: Router, private _postService: PostService) {
+    this.username = "";
     }
   ngOnInit() {
 
