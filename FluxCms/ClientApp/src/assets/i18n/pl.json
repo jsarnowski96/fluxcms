@@ -26,6 +26,8 @@
 
   "nav": {
     "mainPage": "Strona główna",
+    "admin": "Panel administratora",
+    "help": "Pomoc",
     "logout": "Wyloguj",
     "entries": {
       "top": "Posty",

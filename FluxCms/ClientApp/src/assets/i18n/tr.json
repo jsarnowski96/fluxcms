@@ -1,0 +1,82 @@
+{
+  "registration": {
+    "username": "kullanıcı adı",
+    "password": "Şifre",
+    "email": "E-posta",
+    "phone": "Telefon numarası",
+    "name": "Ad",
+    "lastname": "Soyadı",
+    "register": "Kaydol"
+  }
+  "login": {
+    "login": "Login",
+    "password": "Şifre",
+    "register": "Register",
+    "username": "kullanıcı adı"
+  }
+  "dashboard": {
+    "welcomeMessage": "Size iyi günler",
+      "actions": "Hisse senetleri"
+  }
+  "nav": {
+    "mainPage": "Ana Sayfa",
+    "entries": {
+      "top": "Gönderi",
+      "all": "Tüm yayınlar",
+      "categories": "Kategoriler",
+      "add": "Yeni yayın ekle",
+      "tags": "Etiketler",
+      "overview": {
+        "title": "Başlık",
+        "author": "Yazar",
+        "creationDate": "Oluşturuldu",
+        "editDate": "Düzenlendi"
+      }
+    }
+    "pages": {
+      "top": "Sayfalar",
+      "all": "Tüm sayfalar",
+      "add": "Yeni bir sayfa ekle",
+      "overview": {
+        "title": "Başlık",
+        "author": "Yazar",
+        "creationDate": "Oluşturuldu",
+        "editDate": "Düzenlendi"
+      }
+    }
+    "comments": {
+      "top": "Yorumlar",
+      "overview": {
+        "title": "Başlık",
+        "author": "Yazar",
+        "creationDate": "Oluşturuldu",
+        "editDate": "Düzenlendi"
+      }
+    }
+    "settings": {
+      "roles": {
+        "top": "Durum",
+        "all": "Tüm fırsatlar",
+        "add": "Yeni özellikler ekle",
+        "overview": {
+          "name": "Ad",
+          "permissions": "İzinler",
+          "creationDate": "Oluşturuldu"
+        }
+      }
+      "top": "Ayarlar",
+      "users": {
+        "top": "Kullanıcılar",
+        "all": "Tüm kullanıcılar",
+        "add": "Yeni bir kullanıcı ekle",
+        "overview": {
+          "username": "Kullanıcı adı",
+          "email": "E-posta",
+          "roleId": "Durum",
+          "creationDate": "Oluşturma Tarihi"
+        }
+      }
+    }
+    "contact": "Kişiler"
+  }
+}

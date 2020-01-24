@@ -22,7 +22,7 @@
     </div>
     <ul class="list-unstyled components">
       <li class="nav-item active" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
-        <a class="nav-link" [routerLink]="['/dashboard']">{{'nav.mainPage'|translate}}</a>
+        <a class="nav-link" [routerLink]="['']">{{'nav.mainPage'|translate}}</a>
       </li>
       <li *ngIf="authority>0">
       <a href="#entrySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{'nav.entries.top'|translate}}</a>

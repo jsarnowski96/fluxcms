@@ -25,7 +25,10 @@
 
   "nav": {
     "mainPage": "Main page",
-    "logout":  "Logout",
+    "admin": "Admin panel",
+    "help": "Help",
+    "contact": "Contact",
+    "logout": "Logout",
     "entries": {
       "top": "Entries",
       "all": "All entries",
@@ -35,7 +38,7 @@
       "overview": {
         "title": "Title",
         "author": "Author",
-        "body": "Body",
+        "body":"Body",
         "creationDate": "Date of creation",
         "editDate": "Date of modification"
       }
@@ -87,7 +90,6 @@
         }
       }
     },
-    "contact": "Contact",
     "addPost": {
       "title": "Add new post",
       "message": "Post body",
